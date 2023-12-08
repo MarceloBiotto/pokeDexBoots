@@ -19,7 +19,7 @@
   
       containerPokemon.innerHTML += `
        
-        <li class=" pokemon__lista card align-items-center text-center d-flex col-4">
+        <li class=" pokemon__lista card align-items-center text-center d-flex col-4>
           <div class="descricao-pokemon ">
           
             <p>ID: ${pokemonData.id}</p>
