@@ -1,23 +1,42 @@
 
   // const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`);
   
-
+  let pokeImagem = document.querySelector('#pkmn');
+  let pkmName = document.querySelector('#pokeName');
+  let pkId= document.querySelector('#numberPoke');
+  let pkType = document.querySelector('#pokeType');
   
-  fetch("https://pokeapi.co/api/v2/pokemon/?limit=10")
-    .then(response => response.json())
-    .then((data) => {
-        // Imprime os dados brutos recebidos da PokeAPI
-        console.log(data);
 
-        // Itera sobre a lista de resultados e imprime os nomes dos pokémons
-        data.results.forEach((pokemon) => {
-            console.log(pokemon.name);
-        });
+  async function buscarEMostrarPokemons() {
+    try{
+    let containerPokemon = document.querySelector('.container-pokemons');
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=10");
+    const data = await response.json();
+  
+    data.results.forEach(async (pokemon) => {
+      const pokemonResponse = await fetch(pokemon.url);
+      const pokemonData = await pokemonResponse.json();
+  
+      containerPokemon.innerHTML += `
+       
+        <li class="pokemon__lista card align-items-center text-center">
+          <div class="descricao-pokemon col-4">
+          
+            <p>ID: ${pokemonData.id}</p>
+            <p>Name: ${pokemonData.name}</p>
+            <img class="img-pokemon img-fluid" src="${pokemonData.sprites.front_default}" alt="imagem pokemon">
+            <p>Type: ${pokemonData.types[0].type.name}
+          </div>
+        </li>
+       
+      `;
     })
-    .catch(error => console.error(error));
+  }catch(error){
+      containerPokemon.innerHTML += `<p> Houve um erro ao carregar os pokemons: ${error}</p>`
+  }
+}
   
-  
-  
+  buscarEMostrarPokemons();
   
   
   
@@ -26,10 +45,6 @@
   
   //função para detalhes do pokemon especifico
 
-  let pokeImagem = document.querySelector('#pkmn');
-  let pkmName = document.querySelector('#pokeName');
-  let pkId= document.querySelector('#numberPoke');
-  let pkType = document.querySelector('#pokeType');
  
    async function pokeInfo(){
      const response = await fetch('https://pokeapi.co/api/v2/pokemon/blastoise');  
