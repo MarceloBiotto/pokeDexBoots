@@ -17,7 +17,8 @@
     data.results.forEach(async (pokemon) => {
       const pokemonResponse = await fetch(pokemon.url);
       const pokemonData = await pokemonResponse.json();
-  
+      
+        
       containerPokemon.innerHTML += `
        
         <li class=" pokemon__lista card align-items-center text-center d-flex col-4 m-2">
