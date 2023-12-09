@@ -5,7 +5,8 @@
   let pkmName = document.querySelector('#pokeName');
   let pkId= document.querySelector('#numberPoke');
   let pkType = document.querySelector('#pokeType');
-  
+  let  pkWeight = document.querySelector('#weight')
+  let descricaoPokemon = document.querySelector('.descricao-pokemon ');
 
   async function buscarEMostrarPokemons() {
     try{
@@ -61,9 +62,13 @@
     pokeImagem.src = poke.sprites.front_default;
     pkId.innerHTML = poke.id;
     pkType.innerHTML = poke.types[0].type.name;
+    pkWeight.innerHTML = poke.weight;
 
  
+ 
    }
+
+
  
    pokeInfo();
  
