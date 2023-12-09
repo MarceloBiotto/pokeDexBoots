@@ -6,7 +6,8 @@
   let pkId= document.querySelector('#numberPoke');
   let pkType = document.querySelector('#pokeType');
   let  pkWeight = document.querySelector('#weight')
-  let descricaoPokemon = document.querySelector('.descricao-pokemon ');
+  let capturaName = document.querySelector('.descricao-pokemon')
+  
 
   async function buscarEMostrarPokemons() {
     try{
@@ -17,11 +18,13 @@
     data.results.forEach(async (pokemon) => {
       const pokemonResponse = await fetch(pokemon.url);
       const pokemonData = await pokemonResponse.json();
+      capturaName.addEventListener('click',()=>{
+        localStorage.setItem('pokemonData.name', 'nomePokemon');
+      })
       
-        
       containerPokemon.innerHTML += `
        
-        <li class=" pokemon__lista card align-items-center text-center d-flex col-4 m-2 shadow p-2">
+        <li class=" pokemon__lista card align-items-center text-center d-flex col-4 m-2">
           <div class="descricao-pokemon ">
           
             <p>ID: ${pokemonData.id}</p>
