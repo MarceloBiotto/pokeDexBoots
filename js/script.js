@@ -6,11 +6,12 @@
   let pkId= document.querySelector('#numberPoke');
   let pkType = document.querySelector('#pokeType');
   let  pkWeight = document.querySelector('#weight')
-  let capturaName = document.querySelector('.descricao-pokemon')
+
   
 
   async function buscarEMostrarPokemons() {
     try{
+    let capturaName = document.querySelector('.descricao-pokemon')
     let containerPokemon = document.querySelector('.container-pokemons');
     const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=10");
     const data = await response.json();
@@ -18,10 +19,7 @@
     data.results.forEach(async (pokemon) => {
       const pokemonResponse = await fetch(pokemon.url);
       const pokemonData = await pokemonResponse.json();
-      capturaName.addEventListener('click',()=>{
-        localStorage.setItem('pokemonData.name', 'nomePokemon');
-      })
-      
+    
       containerPokemon.innerHTML += `
        
         <li class=" pokemon__lista card align-items-center text-center d-flex col-4 m-2">
@@ -35,6 +33,12 @@
         </li>
        
       `;
+
+      
+     capturaName.addEventListener('click', ()=>{
+      localStorage.setItem('namePokemon', `${pokemonData.name}`);
+     })
+
     })
   }catch(error){
       containerPokemon.innerHTML += `<p> Houve um erro ao carregar os pokemons: ${error}</p>`
@@ -56,10 +60,11 @@
      const poke = await response.json();
      console.log(poke);
      
+
      // console.log(poke.name); 
      // console.log(poke.id);
      // console.log(poke.sprites.front_default);
-     console.log(poke.type)
+
  
  
     pkmName.innerHTML = poke.name;
