@@ -1,5 +1,8 @@
+.container-pokemons {
+    max-width: 1200px;
+}
+
 
 .pokemon__lista{
     width: 200px;
- 
 }
