@@ -11,7 +11,8 @@
 
   async function buscarEMostrarPokemons() {
     try{
-    let capturaName = document.querySelector('.descricao-pokemon')
+    let capturaName = document.querySelector('.descricao-pokemon');
+    console.log(capturaName.name);
     let containerPokemon = document.querySelector('.container-pokemons');
     const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=10");
     const data = await response.json();
