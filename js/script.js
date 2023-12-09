@@ -36,7 +36,8 @@
 
       
      capturaName.addEventListener('click', ()=>{
-      localStorage.setItem('namePokemon', `${pokemonData.name}`);
+      localStorage.setItem('namePokemon', `${pokemonData.name}`); // falta acertar aqui, capturar o input do name
+      // para na proxima pagina pegar esse valor e concatenar com o 'https://pokeapi.co/api/v2/pokemon/' => aqui vai o valor concatenado
      })
 
     })
