@@ -1,5 +1,9 @@
-.pokemon__lista{
-    width: 200px;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 .card {

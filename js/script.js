@@ -13,10 +13,10 @@
     try{
     
     let containerPokemon = document.querySelector('.container-pokemons');
-    const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=10");
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=20");
     const data = await response.json();
   
-    data.results.forEach(async (pokemon) => {
+      data.results.forEach(async (pokemon) => {
       const pokemonResponse = await fetch(pokemon.url);
       const pokemonData = await pokemonResponse.json();
       const pokemonElement = document.createElement('li');
@@ -38,7 +38,8 @@
         const pokemonClicado = pokemonData.name;   // falta acertar aqui, capturar o input do name
         // para na proxima pagina pegar esse valor e concatenar com o 'https://pokeapi.co/api/v2/pokemon/' => aqui vai o valor concatenado
         localStorage.setItem('namePokemon', pokemonClicado);
-      
+        window.location.href = 'pokemonDetalhes.html';
+
     });
   });
   }catch(error){
@@ -53,9 +54,7 @@ buscarEMostrarPokemons();
   
   
   //função para detalhes do pokemon especifico
-  const pokemonGerado =   localStorage.getItem('namePokemon');
-  console.log(pokemonGerado)
-  // window.location.href = 'janelaJogos.html';
+  
    
 
    async function pokeInfo(){
