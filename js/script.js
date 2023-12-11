@@ -59,8 +59,8 @@ buscarEMostrarPokemons();
    
 
    async function pokeInfo(){
- 
-     const response = await fetch('https://pokeapi.co/api/v2/pokemon/blastoise');  
+    const pokemonGerado =   localStorage.getItem('namePokemon');
+     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
      const poke = await response.json();
      console.log(poke);
      
