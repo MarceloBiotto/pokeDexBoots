@@ -55,7 +55,7 @@ buscarEMostrarPokemons();
   //função para detalhes do pokemon especifico
   const pokemonGerado =   localStorage.getItem('namePokemon');
   console.log(pokemonGerado)
-  window.location.href = 'janelaJogos.html';
+  // window.location.href = 'janelaJogos.html';
    
 
    async function pokeInfo(){
