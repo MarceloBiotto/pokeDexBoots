@@ -8,53 +8,58 @@
   let  pkWeight = document.querySelector('#weight')
 
   
+
   async function buscarEMostrarPokemons() {
-    try {
-      let containerPokemon = document.querySelector('.container-pokemons');
-      const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=10");
-      const data = await response.json();
+    try{
+    
+    let containerPokemon = document.querySelector('.container-pokemons');
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=10");
+    const data = await response.json();
   
-      data.results.forEach(async (pokemon) => {
-        const pokemonResponse = await fetch(pokemon.url);
-        const pokemonData = await pokemonResponse.json();
-  
-        const pokemonElement = document.createElement('li');
-        pokemonElement.classList.add('pokemon__lista', 'card', 'align-items-center', 'text-center', 'd-flex', 'col-4', 'm-2');
-        pokemonElement.innerHTML = `
+    data.results.forEach(async (pokemon) => {
+      const pokemonResponse = await fetch(pokemon.url);
+      const pokemonData = await pokemonResponse.json();
+      const pokemonElement = document.createElement('li');
+      pokemonElement.classList.add('pokemon__lista', 'card', 'align-items-center', 'text-center', 'd-flex', 'col-4', 'm-2');
+      pokemonElement.innerHTML = `
           <div class="descricao-pokemon">
+          
             <p>ID: ${pokemonData.id}</p>
-            <p>Name: <span class="pokemon-name">${pokemonData.name}</span></p>
+            <p>Name: <span class= "pokemon-name">${pokemonData.name}</span></p>
             <img class="img-pokemon img-fluid" src="${pokemonData.sprites.front_default}" alt="imagem pokemon">
-            <p>Type: ${pokemonData.types[0].type.name}</p>
+            <p>Type: ${pokemonData.types[0].type.name}
           </div>
-        `;
-  
-        containerPokemon.appendChild(pokemonElement);
-  
-        // Adicionar o event listener para cada elemento Pokémon
-        pokemonElement.addEventListener('click', () => {
-          const pokemonClicado = pokemonData.name;
-          localStorage.setItem('namePokemon', pokemonClicado);
-        });
-      });
-  
-    } catch (error) {
-      containerPokemon.innerHTML += `<p>Houve um erro ao carregar os pokemons: ${error}</p>`;
-    }
+        </li>
+       
+      `;
+      containerPokemon.appendChild(pokemonElement);
+      
+      pokemonElement.addEventListener('click', () => {
+        const pokemonClicado = pokemonData.name;   // falta acertar aqui, capturar o input do name
+        // para na proxima pagina pegar esse valor e concatenar com o 'https://pokeapi.co/api/v2/pokemon/' => aqui vai o valor concatenado
+        localStorage.setItem('namePokemon', pokemonClicado);
+      
+    });
+  });
+  }catch(error){
+      containerPokemon.innerHTML += `<p> Houve um erro ao carregar os pokemons: ${error}</p>`
   }
-  
-  buscarEMostrarPokemons();
-  
-  
+}
+
+buscarEMostrarPokemons();
   
   
   
   
   
   //função para detalhes do pokemon especifico
+  const pokemonGerado =   localStorage.getItem('namePokemon');
+  console.log(pokemonGerado)
+  window.location.href = 'janelaJogos.html';
+   
 
- 
    async function pokeInfo(){
+ 
      const response = await fetch('https://pokeapi.co/api/v2/pokemon/blastoise');  
      const poke = await response.json();
      console.log(poke);
