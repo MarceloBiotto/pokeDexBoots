@@ -23,10 +23,10 @@
       containerPokemon.innerHTML += `
        
         <li class=" pokemon__lista card align-items-center text-center d-flex col-4 m-2">
-          <div class="descricao-pokemon ">
+          <div class="descricao-pokemon">
           
             <p>ID: ${pokemonData.id}</p>
-            <p>Name: ${pokemonData.name}</p>
+            <p>Name: <span class= "pokemon-name">${pokemonData.name}</span></p>
             <img class="img-pokemon img-fluid" src="${pokemonData.sprites.front_default}" alt="imagem pokemon">
             <p>Type: ${pokemonData.types[0].type.name}
           </div>
@@ -35,12 +35,13 @@
       `;
 
       
-     capturaName.addEventListener('click', ()=>{
-      localStorage.setItem('namePokemon', `${pokemonData.name}`); // falta acertar aqui, capturar o input do name
-      // para na proxima pagina pegar esse valor e concatenar com o 'https://pokeapi.co/api/v2/pokemon/' => aqui vai o valor concatenado
-     })
-
-    })
+      containerPokemon.addEventListener('click', () => {
+        const pokemonClicado = containerPokemon.querySelector('.pokemon-name').textContent; // falta acertar aqui, capturar o input do name
+        // para na proxima pagina pegar esse valor e concatenar com o 'https://pokeapi.co/api/v2/pokemon/' => aqui vai o valor concatenado
+        localStorage.setItem('namePokemon', pokemonClicado);
+      
+    });
+  });
   }catch(error){
       containerPokemon.innerHTML += `<p> Houve um erro ao carregar os pokemons: ${error}</p>`
   }
