@@ -1,6 +1,19 @@
+body {
+    height: 100vh;
+    background-image: url(/assets/img/pokedex-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
 
 .card {
-    width: 18rem
+    width: 400px;
+    height: 400px;
+}
+
+.card-body {
+    width: 200px;
+    height: 200px;
 }
 
 .container {
