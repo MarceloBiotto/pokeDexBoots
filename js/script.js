@@ -5,7 +5,9 @@
   let pkmName = document.querySelector('#pokeName');
   let pkId= document.querySelector('#numberPoke');
   let pkType = document.querySelector('#pokeType');
-  let  pkWeight = document.querySelector('#weight')
+  let pkType2 = document.querySelector('#pokeType2');
+  let pkWeight = document.querySelector('#weight');
+
 
   
 
@@ -20,7 +22,7 @@
       const pokemonResponse = await fetch(pokemon.url);
       const pokemonData = await pokemonResponse.json();
       const pokemonElement = document.createElement('li');
-      pokemonElement.classList.add('pokemon__lista', 'card', 'align-items-center', 'text-center', 'd-flex', 'col-4', 'm-2');
+      pokemonElement.classList.add('pokemon__lista', 'card', 'align-items-center', 'text-center', 'd-flex', 'col-4', 'm-2', 'shadow');
       pokemonElement.innerHTML = `
           <div class="descricao-pokemon">
           
@@ -57,12 +59,11 @@ buscarEMostrarPokemons();
   
    
 
-   async function pokeInfo(){
+    async function pokeInfo(){
     const pokemonGerado =   localStorage.getItem('namePokemon');
-     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
-     const poke = await response.json();
-     console.log(poke);
-     
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
+    const poke = await response.json();
+    console.log(poke);
 
      // console.log(poke.name); 
      // console.log(poke.id);
@@ -74,6 +75,7 @@ buscarEMostrarPokemons();
     pokeImagem.src = poke.sprites.front_default;
     pkId.innerHTML = poke.id;
     pkType.innerHTML = poke.types[0].type.name;
+    pkType2.innerHTML = poke.types[1].type.name;
     pkWeight.innerHTML = poke.weight;
 
  
