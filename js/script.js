@@ -33,6 +33,7 @@
         </li>
        
       `;
+
       containerPokemon.appendChild(pokemonElement);
       
       pokemonElement.addEventListener('click', () => {
@@ -41,6 +42,8 @@
         window.location.href = 'pokemonDetalhes.html';
 
     });
+
+
   });
   }catch(error){
       containerPokemon.innerHTML += `<p> Houve um erro ao carregar os pokemons: ${error}</p>`
@@ -72,7 +75,7 @@ buscarEMostrarPokemons();
     pkWeight.innerHTML = poke.weight;
     pkType.innerHTML = poke.types[0].type.name;
     pkType2.innerHTML = poke.types[1].type.name;
-  
+    
  
  
    }
