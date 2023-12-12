@@ -37,9 +37,12 @@
       containerPokemon.appendChild(pokemonElement);
       
       pokemonElement.addEventListener('click', () => {
-        const pokemonClicado = pokemonData.name;  
+        const pokemonClicado = pokemonData.name; 
+        const idPokemonClicado = pokemonData.id; 
         localStorage.setItem('namePokemon', pokemonClicado);
+        localStorage.setItem('idPokemon', idPokemonClicado)
         window.location.href = 'pokemonDetalhes.html';
+
 
     });
 
@@ -96,7 +99,7 @@ async function pokeUpdate() {
     pkType.innerHTML = pokeUptadeAtribute.types[0].type.name;
     pkType2.innerHTML = pokeUptadeAtribute.types[1].type.name;
   } 
-
+let idPokemonGerado =   localStorage.getItem('idPokemon');
 document.addEventListener("DOMContentLoaded", () => {
   const previousButton = document.getElementById("previous-btn");
   const nextButton = document.getElementById("next-btn");
@@ -104,22 +107,21 @@ document.addEventListener("DOMContentLoaded", () => {
   previousButton.addEventListener("click", async () => {
     if (currentId > 1) {
       currentId--;
-      clearLocalStorage();
+      
       await pokeUpdate();
     }
   });
 
   nextButton.addEventListener("click", async () => {
     currentId++;
-    clearLocalStorage();
+    
     await pokeUpdate();
   });
 
   
-  currentId = 1;
+  currentId = idPokemonGerado;
   pokeUpdate();  
 });
 
-function clearLocalStorage() {
-  localStorage.removeItem('namePokemon');
-}
+
+console.log(idPokemonGerado);
