@@ -8,7 +8,6 @@
   let pkType2 = document.querySelector('#pokeType2');
   let pkWeight = document.querySelector('#weight');
 
-
   
 
   async function buscarEMostrarPokemons() {
@@ -37,8 +36,7 @@
       containerPokemon.appendChild(pokemonElement);
       
       pokemonElement.addEventListener('click', () => {
-        const pokemonClicado = pokemonData.name;   // falta acertar aqui, capturar o input do name
-        // para na proxima pagina pegar esse valor e concatenar com o 'https://pokeapi.co/api/v2/pokemon/' => aqui vai o valor concatenado
+        const pokemonClicado = pokemonData.name;  
         localStorage.setItem('namePokemon', pokemonClicado);
         window.location.href = 'pokemonDetalhes.html';
 
@@ -65,9 +63,6 @@ buscarEMostrarPokemons();
     const poke = await response.json();
     console.log(poke);
 
-     // console.log(poke.name); 
-     // console.log(poke.id);
-     // console.log(poke.sprites.front_default);
 
  
  
@@ -77,8 +72,7 @@ buscarEMostrarPokemons();
     pkWeight.innerHTML = poke.weight;
     pkType.innerHTML = poke.types[0].type.name;
     pkType2.innerHTML = poke.types[1].type.name;
-    
-
+  
  
  
    }
