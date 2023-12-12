@@ -74,9 +74,10 @@ buscarEMostrarPokemons();
     pkmName.innerHTML = poke.name;
     pokeImagem.src = poke.sprites.front_default;
     pkId.innerHTML = poke.id;
+    pkWeight.innerHTML = poke.weight;
     pkType.innerHTML = poke.types[0].type.name;
     pkType2.innerHTML = poke.types[1].type.name;
-    pkWeight.innerHTML = poke.weight;
+    
 
  
  
