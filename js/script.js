@@ -1,6 +1,6 @@
 
   // const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`);
- 
+  let currentId;
   let pokeImagem = document.querySelector('#pkmn');
   let pkmName = document.querySelector('#pokeName');
   let pkId= document.querySelector('#numberPoke');
@@ -35,7 +35,7 @@
       `;
 
       containerPokemon.appendChild(pokemonElement);
- 
+      
       pokemonElement.addEventListener('click', () => {
         const pokemonClicado = pokemonData.name;  
         localStorage.setItem('namePokemon', pokemonClicado);
@@ -82,36 +82,44 @@ buscarEMostrarPokemons();
 
    pokeInfo();
  
-   document.addEventListener("DOMContentLoaded", () => {
-    const previousButton = document.getElementById("previous-btn");
-    const nextButton = document.getElementById("next-btn");
-    let currentId = pkId;
-    console.log(currentId);
 
-    previousButton.addEventListener("click", async () => {
-        if (currentId > 1) {
-            currentId--;
-            await pokeUpdate(); 
-        }
-    });
-
-    nextButton.addEventListener("click", async () => {
-        currentId++;
-        await pokeUpdate();
-    });
-
-
-});
 
 async function pokeUpdate() {
+
     const responseUptade = await fetch(`https://pokeapi.co/api/v2/pokemon/${currentId}`);
     const pokeUptadeAtribute = await responseUptade.json();
-     
+
     pkmName.innerHTML = pokeUptadeAtribute.name;
     pokeImagem.src = pokeUptadeAtribute.sprites.front_default;
     pkId.innerHTML = pokeUptadeAtribute.id;
     pkWeight.innerHTML = pokeUptadeAtribute.weight;
     pkType.innerHTML = pokeUptadeAtribute.types[0].type.name;
     pkType2.innerHTML = pokeUptadeAtribute.types[1].type.name;
+  } 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const previousButton = document.getElementById("previous-btn");
+  const nextButton = document.getElementById("next-btn");
+
+  previousButton.addEventListener("click", async () => {
+    if (currentId > 1) {
+      currentId--;
+      clearLocalStorage();
+      await pokeUpdate();
+    }
+  });
+
+  nextButton.addEventListener("click", async () => {
+    currentId++;
+    clearLocalStorage();
+    await pokeUpdate();
+  });
+
   
+  currentId = 1;
+  pokeUpdate();  
+});
+
+function clearLocalStorage() {
+  localStorage.removeItem('namePokemon');
 }
