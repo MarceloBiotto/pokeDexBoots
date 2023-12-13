@@ -76,6 +76,9 @@ buscarEMostrarPokemons();
     const poke = await response.json();
 
 
+    const idPoke = pokemonData.id; 
+    localStorage.setItem('idPokemon', idPoke);
+
 
  
  
@@ -155,21 +158,3 @@ inputBusca.addEventListener('click', (e) => {
 
 
 
-// // nosso map ainda não funciona, verificar metodos para faze-lo funcionar , visto na aula o metodo switch que tambem poderia ser usado
-// const types = [
-//   normal,fire,water,fighting,flying,grass,poison,electric,ground,psychic,rock,ice,bug,dragon,ghost,dark,steel,fairy];
-//   const filterPokemonType = types.map((type, tipo)=>{
-//     if(tipo == 'fire'){
-
-//       console.log('eu sou fogo!!');
-//       return type;
-//     }
-//   });
-// console.log(types);
-
-// function pintaCard(){
-//   const cards = document.querySelector('.pokemon__lista')
-//   if(tipoPokemon.includes("fire")){
-//     cards.style.backgroundColor= 'red';
-//   }
-// }     
