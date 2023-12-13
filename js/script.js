@@ -66,7 +66,7 @@ buscarEMostrarPokemons();
   
   
   
-  //função para detalhes do pokemon especifico
+
   
    
 
@@ -75,7 +75,7 @@ buscarEMostrarPokemons();
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
     const poke = await response.json();
 
-
+      
 
  
  
@@ -84,7 +84,7 @@ buscarEMostrarPokemons();
     pkId.innerHTML = poke.id;
     pkWeight.innerHTML = poke.weight;
     pkType.innerHTML = poke.types.map(typePoke => typePoke.type.name);
-    // pkType2.innerHTML = poke.types[1].type.name;
+    
  
  
  
@@ -104,8 +104,7 @@ async function pokeUpdate() {
     pkId.innerHTML = pokeUptadeAtribute.id;
     pkWeight.innerHTML = pokeUptadeAtribute.weight;
     pkType.innerHTML = poke.types.map(typePoke => typePoke.type.name);
-    // pkType.innerHTML = pokeUptadeAtribute.types[0].type.name;
-    // pkType2.innerHTML = pokeUptadeAtribute.types[1].type.name;
+    localStorage.setItem('idPokemon', pkId);
 
   } 
 let idPokemonGerado =   localStorage.getItem('idPokemon');
@@ -137,14 +136,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function capturarInformacoes() {
-  // let form = document.querySelector('.formPoke').value;
+  
   let valorForm = document.querySelector('.form-control').value;
  let  pokeIdName =  valorForm;
-console.log(valorForm);
+
 
    
   localStorage.setItem('namePokemon', pokeIdName);
-
   window.location.href = 'pokemonDetalhes.html';
 }
 
