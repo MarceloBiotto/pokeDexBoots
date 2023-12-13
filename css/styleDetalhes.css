@@ -3,7 +3,6 @@ body {
     background-image: url(/assets/img/pokedex-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .card {
@@ -17,9 +16,18 @@ body {
 }
 
 .container {
-    height: 100vh;
+    height: 94vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.poke-imagem {
+    position: absolute;
+}
+
+.btn-primary {
+    position: relative;
 }
