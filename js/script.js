@@ -49,7 +49,7 @@
 
   });
   }catch(error){
-      containerPokemon.innerHTML += `<p> Houve um erro ao carregar os pokemons: ${error}</p>`
+    pokemonElement.innerHTML += `<p> Houve um erro ao carregar os pokemons: ${error}</p>`
   }
 }
 
@@ -67,7 +67,7 @@ buscarEMostrarPokemons();
     const pokemonGerado =   localStorage.getItem('namePokemon');
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
     const poke = await response.json();
-    console.log(poke);
+
 
 
  
@@ -98,6 +98,7 @@ async function pokeUpdate() {
     pkWeight.innerHTML = pokeUptadeAtribute.weight;
     pkType.innerHTML = pokeUptadeAtribute.types[0].type.name;
     pkType2.innerHTML = pokeUptadeAtribute.types[1].type.name;
+
   } 
 let idPokemonGerado =   localStorage.getItem('idPokemon');
 document.addEventListener("DOMContentLoaded", () => {
@@ -124,4 +125,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-console.log(idPokemonGerado);
+// nosso map ainda não funciona, verificar metodos para faze-lo funcionar , visto na aula o metodo switch que tambem poderia ser usado
+const types = [
+  normal,fire,water,fighting,flying,grass,poison,electric,ground,psychic,rock,ice,bug,dragon,ghost,dark,steel,fairy];
+  const filterPokemonType = types.map((type, tipo)=>{
+    if(tipo == 'fire'){
+
+      console.log('eu sou fogo!!');
+      return type;
+    }
+  });
+console.log(types);
