@@ -134,10 +134,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-function buscarPokemon() {
-  
- 
-  localStorage.setItem('namePokemon', nomePoke);
+
+debugger
+function capturarInformacoes(event) {
+  event.preventDefault(); 
+
+
+  var pokeIdName = document.getElementById('pokeId').value;
+
+  console.log('ID do Pokemon: ' + pokeIdName);
+   
+  localStorage.setItem('namePokemon', pokeIdNames);
   window.location.href = 'pokemonDetalhes.html';
 }
 
@@ -145,7 +152,6 @@ inputBusca.addEventListener('submit', (e) => {
   e.preventDefault();
   buscarPokemon();
 });
-
 
 
 
