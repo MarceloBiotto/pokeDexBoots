@@ -8,7 +8,7 @@
   let pkType2 = document.querySelector('#pokeType2');
   let pkWeight = document.querySelector('#weight');
   // const inputSearch = document.querySelector('.form-control');
-  let inputBusca = document.querySelector('.inputSearch');
+  let inputBusca = document.querySelector('.inputBuscar');
 
   async function buscarEMostrarPokemons() {
     try{
@@ -133,22 +133,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
- function buscarPokemon(){
-  const nomePoke = document.querySelector('.form-control').textContent.toLowerCase();
-  pokemonClicado= nomePoke;
-  localStorage.setItem('namePokemon', pokemonClicado);
+function buscarPokemon() {
+  const nomePoke = document.querySelector('.form-control').value.toLowerCase();
+ 
+  localStorage.setItem('namePokemon', nomePoke);
   window.location.href = 'pokemonDetalhes.html';
+}
 
-
- }
-
- inputBusca.addEventListener('submit',function(e){
+inputBusca.addEventListener('submit', (e) => {
   e.preventDefault();
   buscarPokemon();
- })
-     
-
-
+});
 
 
 
