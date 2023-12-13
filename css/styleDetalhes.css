@@ -8,14 +8,25 @@ body {
 }
 
 .card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-direction: row;
+    background-color: black;
     position: absolute;
-    left: 48%;
-    top: 50%;
-    width: 300px;
-    height: 100px;
+    height: 300px;
+    width: 400px;
+    left: 40%;
+    top: 35%;
+}
+
+#pkmn {
+    width: 150px;
 }
 
 .card-body {
+    padding: 0;
     width: 200px;
     height: 200px;
 }
