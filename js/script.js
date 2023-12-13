@@ -72,12 +72,13 @@ buscarEMostrarPokemons();
 
     async function pokeInfo(){
     const pokemonGerado =   localStorage.getItem('namePokemon');
+    const pokemonIdGerado = localStorage.getItem('idPokemon');
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
     const poke = await response.json();
 
 
-    const idPoke = pokemonData.id; 
-    localStorage.setItem('idPokemon', idPoke);
+    // const idPoke = pokemonData.id; 
+    // localStorage.setItem('idPokemon', idPoke);  
 
 
  
@@ -155,6 +156,4 @@ inputBusca.addEventListener('click', (e) => {
   e.preventDefault();
   capturarInformacoes();
 });
-
-
 
