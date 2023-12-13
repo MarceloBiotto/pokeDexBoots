@@ -144,7 +144,7 @@ function capturarInformacoes(event) {
 
   console.log('ID do Pokemon: ' + pokeIdName);
    
-  localStorage.setItem('namePokemon', pokeIdNames);
+  localStorage.setItem('namePokemon', pokeIdName);
   window.location.href = 'pokemonDetalhes.html';
 }
 
