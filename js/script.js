@@ -136,11 +136,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 debugger
-function capturarInformacoes(event) {
-  event.preventDefault(); 
+function capturarInformacoes() {
+ 
 
-
-  var pokeIdName = document.getElementById('pokeId').value;
+  var pokeIdName = document.querySelector('.formPoke').value;
 
   console.log('ID do Pokemon: ' + pokeIdName);
    
