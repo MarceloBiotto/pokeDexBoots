@@ -7,8 +7,8 @@
   let pkType = document.querySelector('#pokeType');
   let pkType2 = document.querySelector('#pokeType2');
   let pkWeight = document.querySelector('#weight');
-
-  
+  // const inputSearch = document.querySelector('.form-control');
+  let inputBusca = document.querySelector('.inputSearch');
 
   async function buscarEMostrarPokemons() {
     try{
@@ -28,19 +28,24 @@
             <p>ID: ${pokemonData.id}</p>
             <p>Name: <span class= "pokemon-name">${pokemonData.name}</span></p>
             <img class="img-pokemon img-fluid" src="${pokemonData.sprites.front_default}" alt="imagem pokemon">
-            <p>Type: ${pokemonData.types[0].type.name}
+            <p class= "pokemon-type">Type: ${pokemonData.types.map(typePoke => typePoke.type.name)}
           </div>
         </li>
        
       `;
 
+
+
       containerPokemon.appendChild(pokemonElement);
+
       
       pokemonElement.addEventListener('click', () => {
         const pokemonClicado = pokemonData.name; 
         const idPokemonClicado = pokemonData.id; 
+        const pokemonTypes = pokemonData.types.map(typePoke => typePoke.type.name);
         localStorage.setItem('namePokemon', pokemonClicado);
         localStorage.setItem('idPokemon', idPokemonClicado)
+        localStorage.setItem('typePokemon', pokemonTypes); // verificar se vai ser util ter  o pokemonType salvo no id para  a janela de detalhes com o Giovane
         window.location.href = 'pokemonDetalhes.html';
 
 
@@ -51,11 +56,13 @@
   }catch(error){
     pokemonElement.innerHTML += `<p> Houve um erro ao carregar os pokemons: ${error}</p>`
   }
+
+
 }
 
 buscarEMostrarPokemons();
   
-  
+
   
   
   
@@ -76,8 +83,8 @@ buscarEMostrarPokemons();
     pokeImagem.src = poke.sprites.front_default;
     pkId.innerHTML = poke.id;
     pkWeight.innerHTML = poke.weight;
-    pkType.innerHTML = poke.types[0].type.name;
-    pkType2.innerHTML = poke.types[1].type.name;
+    pkType.innerHTML = poke.types.map(typePoke => typePoke.type.name);
+    // pkType2.innerHTML = poke.types[1].type.name;
  
  
  
@@ -125,14 +132,42 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// nosso map ainda não funciona, verificar metodos para faze-lo funcionar , visto na aula o metodo switch que tambem poderia ser usado
-const types = [
-  normal,fire,water,fighting,flying,grass,poison,electric,ground,psychic,rock,ice,bug,dragon,ghost,dark,steel,fairy];
-  const filterPokemonType = types.map((type, tipo)=>{
-    if(tipo == 'fire'){
 
-      console.log('eu sou fogo!!');
-      return type;
-    }
-  });
-console.log(types);
+ function buscarPokemon(){
+  const nomePoke = document.querySelector('.form-control').textContent.toLowerCase();
+  pokemonClicado= nomePoke;
+  localStorage.setItem('namePokemon', pokemonClicado);
+  window.location.href = 'pokemonDetalhes.html';
+
+
+ }
+
+ inputBusca.addEventListener('submit',function(e){
+  e.preventDefault();
+  buscarPokemon();
+ })
+     
+
+
+
+
+
+
+// // nosso map ainda não funciona, verificar metodos para faze-lo funcionar , visto na aula o metodo switch que tambem poderia ser usado
+// const types = [
+//   normal,fire,water,fighting,flying,grass,poison,electric,ground,psychic,rock,ice,bug,dragon,ghost,dark,steel,fairy];
+//   const filterPokemonType = types.map((type, tipo)=>{
+//     if(tipo == 'fire'){
+
+//       console.log('eu sou fogo!!');
+//       return type;
+//     }
+//   });
+// console.log(types);
+
+// function pintaCard(){
+//   const cards = document.querySelector('.pokemon__lista')
+//   if(tipoPokemon.includes("fire")){
+//     cards.style.backgroundColor= 'red';
+//   }
+// }     
