@@ -7,8 +7,9 @@
   let pkType = document.querySelector('#pokeType');
   let pkType2 = document.querySelector('#pokeType2');
   let pkWeight = document.querySelector('#weight');
-  // const inputSearch = document.querySelector('.form-control');
   let inputBusca = document.querySelector('.inputBuscar');
+  let form = document.querySelector('.formPoke');
+  let valorForm = document.querySelector('.form-control');
 
   async function buscarEMostrarPokemons() {
     try{
@@ -134,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function buscarPokemon() {
-  const nomePoke = document.querySelector('.form-control').value.toLowerCase();
+  
  
   localStorage.setItem('namePokemon', nomePoke);
   window.location.href = 'pokemonDetalhes.html';
