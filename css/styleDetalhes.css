@@ -6,8 +6,8 @@ body {
 }
 
 .card {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
 }
 
 .card-body {
@@ -17,10 +17,6 @@ body {
 
 .container {
     height: 94vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
 }
 
