@@ -8,8 +8,7 @@
   let pkType2 = document.querySelector('#pokeType2');
   let pkWeight = document.querySelector('#weight');
   let inputBusca = document.querySelector('.inputBuscar');
-  let form = document.querySelector('.formPoke');
-  let valorForm = document.querySelector('.form-control');
+
 
   async function buscarEMostrarPokemons() {
     try{
@@ -104,8 +103,9 @@ async function pokeUpdate() {
     pokeImagem.src = pokeUptadeAtribute.sprites.front_default;
     pkId.innerHTML = pokeUptadeAtribute.id;
     pkWeight.innerHTML = pokeUptadeAtribute.weight;
-    pkType.innerHTML = pokeUptadeAtribute.types[0].type.name;
-    pkType2.innerHTML = pokeUptadeAtribute.types[1].type.name;
+    pkType.innerHTML = poke.types.map(typePoke => typePoke.type.name);
+    // pkType.innerHTML = pokeUptadeAtribute.types[0].type.name;
+    // pkType2.innerHTML = pokeUptadeAtribute.types[1].type.name;
 
   } 
 let idPokemonGerado =   localStorage.getItem('idPokemon');
@@ -135,21 +135,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-debugger
+
 function capturarInformacoes() {
- 
+  // let form = document.querySelector('.formPoke').value;
+  let valorForm = document.querySelector('.form-control').value;
+ let  pokeIdName =  valorForm;
+console.log(valorForm);
 
-  var pokeIdName = document.querySelector('.formPoke').value;
-
-  console.log('ID do Pokemon: ' + pokeIdName);
    
   localStorage.setItem('namePokemon', pokeIdName);
+
   window.location.href = 'pokemonDetalhes.html';
 }
 
-inputBusca.addEventListener('submit', (e) => {
+inputBusca.addEventListener('click', (e) => {
   e.preventDefault();
-  buscarPokemon();
+  capturarInformacoes();
 });
 
 
