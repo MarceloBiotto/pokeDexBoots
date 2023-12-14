@@ -63,7 +63,7 @@
 buscarEMostrarPokemons();
   
 function capturarInformacoes() {
-  let valorForm = document.querySelector('.form-control').value;
+  let valorForm = document.querySelector('.form-control').value.toLowerCase();
   let pokeIdName = valorForm;
 
   async function searchInfo(pokemonIdName) {
