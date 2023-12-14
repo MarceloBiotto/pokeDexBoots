@@ -9,13 +9,13 @@
   
 
 
-  async function buscarEMostrarPokemons(contador = 20 , offSet = 0 ) {
+  async function buscarEMostrarPokemons(contador = 20 , offset = 0 ) {
     try{
     
     let containerPokemon = document.querySelector('.container-pokemons');
     // const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=20"); // essa esta funcionando, estamos testando a pagination 
     // com a response a baixo;
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${contador}&offset=${offSet}`);
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${contador}&offset=${offset}`);
     const data = await response.json();
   
       data.results.forEach(async (pokemon) => {
@@ -94,13 +94,12 @@ let contador = 0;
 
 maisPokemon.addEventListener('click', (e)=>{
   e.preventDefault();
-  const offSet = localStorage.getItem('pagination');
+  const offset = localStorage.getItem('pagination');
   contador += 20;
   localStorage.setItem('pagination', contador)
 
-  console.log("teste")
-  // novaUrl = url  + contador;
- buscarEMostrarPokemons(contador, offSet);
+  
+ buscarEMostrarPokemons(contador, offset);
  
 
 })
