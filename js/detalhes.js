@@ -1,17 +1,19 @@
+let pkType1 = document.querySelector('#pokeType1');
+ 
 async function pokeInfo(){
     const pokemonGerado =   localStorage.getItem('namePokemon');
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
     const poke = await response.json();
+   
 
 
 
-
-
+    
     pkmName.innerHTML = poke.name;
     pokeImagem.src = poke.sprites.front_default;
     pkId.innerHTML = poke.id;
     pkWeight.innerHTML = poke.weight;
-    pkType.innerHTML = poke.types.map(typePoke => typePoke.type.name);
+     pkType1.innerHTML = poke.types.map(typePoke => typePoke.type.name);
 
 
 
@@ -22,8 +24,7 @@ async function pokeInfo(){
 
 
 
-async function pokeUpdate() {
-
+   async function pokeUpdate() {
     const responseUptade = await fetch(`https://pokeapi.co/api/v2/pokemon/${currentId}`);
     const pokeUptadeAtribute = await responseUptade.json();
 
@@ -31,10 +32,14 @@ async function pokeUpdate() {
     pokeImagem.src = pokeUptadeAtribute.sprites.front_default;
     pkId.innerHTML = pokeUptadeAtribute.id;
     pkWeight.innerHTML = pokeUptadeAtribute.weight;
-    pkType.innerHTML = poke.types.map(typePoke => typePoke.type.name);
-    localStorage.setItem('idPokemon', pkId);
 
-  } 
+    
+    pkType1.innerHTML = pokeUptadeAtribute.types.map(typePoke => typePoke.type.name).join(', ');
+    pkType2.innerHTML = pokeUptadeAtribute.types.length > 1 ? pokeUptadeAtribute.types[1].type.name : '';
+
+    localStorage.setItem('idPokemon', pkId);
+}
+
 let idPokemonGerado =   localStorage.getItem('idPokemon');
 document.addEventListener("DOMContentLoaded", () => {
   const previousButton = document.getElementById("previous-btn");
@@ -56,5 +61,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
   currentId = idPokemonGerado;
-  pokeUpdate();  
+ 
 });

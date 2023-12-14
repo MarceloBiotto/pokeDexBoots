@@ -3,7 +3,6 @@
   let pokeImagem = document.querySelector('#pkmn');
   let pkmName = document.querySelector('#pokeName');
   let pkId= document.querySelector('#numberPoke');
-
   let pkType2 = document.querySelector('#pokeType2');
   let pkWeight = document.querySelector('#weight');
   let inputBusca = document.querySelector('.inputBuscar');
@@ -73,7 +72,7 @@ function capturarInformacoes() {
   window.location.href = 'pokemonDetalhes.html';
 }
 
-inputBusca.addEventListener('click', (e) => {
+inputBusca.addEventListener('click', async(e) => {
   e.preventDefault();
   capturarInformacoes();
 });
