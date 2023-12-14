@@ -3,7 +3,7 @@
   let pokeImagem = document.querySelector('#pkmn');
   let pkmName = document.querySelector('#pokeName');
   let pkId= document.querySelector('#numberPoke');
-  let pkType = document.querySelector('#pokeType');
+
   let pkType2 = document.querySelector('#pokeType2');
   let pkWeight = document.querySelector('#weight');
   let inputBusca = document.querySelector('.inputBuscar');
@@ -58,6 +58,7 @@
 
 
 }
+
 
 buscarEMostrarPokemons();
   
