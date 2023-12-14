@@ -1,3 +1,27 @@
+async function pokeInfo(){
+    const pokemonGerado =   localStorage.getItem('namePokemon');
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
+    const poke = await response.json();
+
+
+
+
+
+    pkmName.innerHTML = poke.name;
+    pokeImagem.src = poke.sprites.front_default;
+    pkId.innerHTML = poke.id;
+    pkWeight.innerHTML = poke.weight;
+    pkType.innerHTML = poke.types.map(typePoke => typePoke.type.name);
+
+
+
+
+   }
+
+   pokeInfo();
+
+
+
 async function pokeUpdate() {
 
     const responseUptade = await fetch(`https://pokeapi.co/api/v2/pokemon/${currentId}`);
