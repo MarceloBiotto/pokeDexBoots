@@ -63,17 +63,23 @@
 buscarEMostrarPokemons();
   
 function capturarInformacoes() {
-  
   let valorForm = document.querySelector('.form-control').value;
- let  pokeIdName =  valorForm;
+  let pokeIdName = valorForm;
+
+  async function searchInfo(pokemonIdName) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonIdName}`);
+    const pokeSearch = await response.json();
+    const pokeIdSearch = pokeSearch.id;
+
+    localStorage.setItem('idPokemon', pokeIdSearch);
+    window.location.href = 'pokemonDetalhes.html';
+  }
 
 
-   
-  localStorage.setItem('namePokemon', pokeIdName);
-  window.location.href = 'pokemonDetalhes.html';
+  searchInfo(pokeIdName);
 }
 
-inputBusca.addEventListener('click', async(e) => {
+inputBusca.addEventListener('click', async (e) => {
   e.preventDefault();
   capturarInformacoes();
 });

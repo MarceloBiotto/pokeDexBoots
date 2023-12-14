@@ -1,7 +1,7 @@
 let pkType1 = document.querySelector('#pokeType1');
  
 async function pokeInfo(){
-    const pokemonGerado =   localStorage.getItem('namePokemon');
+    const pokemonGerado =   localStorage.getItem('idPokemon');
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
     const poke = await response.json();
    
