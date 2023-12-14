@@ -49,3 +49,11 @@ body {
 .btn-primary {
     position: relative;
 }
+
+@media screen and (max-width: 1400px) {
+
+    .card {
+        left: 38%;
+        top: 53%;
+    }
+}
