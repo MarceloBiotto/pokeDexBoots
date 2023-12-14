@@ -15,9 +15,9 @@ body {
     flex-direction: row;
     position: absolute;
     height: 200px;
-    width: 360px;
-    left: 38%;
-    top: 54%;
+    width: 340px;
+    left: 40%;
+    top: 53%;
 }
 
 #pkmn {
@@ -26,9 +26,14 @@ body {
 
 .card-body {
     padding: 0;
-    width: 180px;
-    height: 160px;
+    margin: 0;
+    width: 150px;
+    height: 120px;
     list-style: none;
+}
+
+.card-title {
+    width: 150px;
 }
 
 .container {
