@@ -13,12 +13,11 @@ body {
     justify-content: flex-end;
     align-content: flex-end;
     flex-direction: row;
-    background-color: black;
     position: absolute;
-    height: 300px;
-    width: 400px;
-    left: 40%;
-    top: 35%;
+    height: 200px;
+    width: 360px;
+    left: 38%;
+    top: 54%;
 }
 
 #pkmn {
@@ -27,8 +26,9 @@ body {
 
 .card-body {
     padding: 0;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 160px;
+    list-style: none;
 }
 
 .container {
