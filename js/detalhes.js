@@ -13,8 +13,7 @@ async function pokeInfo(){
     pokeImagem.src = poke.sprites.front_default;
     pkId.innerHTML = poke.id;
     pkWeight.innerHTML = poke.weight;
-     pkType1.innerHTML = poke.types.map(typePoke => typePoke.type.name);
-
+    pkType1.innerHTML = poke.types.map(typePoke => typePoke.type.name);
 
 
 
@@ -35,7 +34,7 @@ async function pokeInfo(){
 
     
     pkType1.innerHTML = pokeUptadeAtribute.types.map(typePoke => typePoke.type.name).join(', ');
-    pkType2.innerHTML = pokeUptadeAtribute.types.length > 1 ? pokeUptadeAtribute.types[1].type.name : '';
+  
 
     localStorage.setItem('idPokemon', pkId);
 }

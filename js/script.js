@@ -6,6 +6,7 @@
   let pkType2 = document.querySelector('#pokeType2');
   let pkWeight = document.querySelector('#weight');
   let inputBusca = document.querySelector('.inputBuscar');
+  
 
 
   async function buscarEMostrarPokemons() {
@@ -40,7 +41,7 @@
       pokemonElement.addEventListener('click', () => {
         const pokemonClicado = pokemonData.name; 
         const idPokemonClicado = pokemonData.id; 
-        const pokemonTypes = pokemonData.types.map(typePoke => typePoke.type.name);
+        const pokemonTypes =pokemonData.types.map(typePoke => typePoke.type.name);
         localStorage.setItem('namePokemon', pokemonClicado);
         localStorage.setItem('idPokemon', idPokemonClicado)
         localStorage.setItem('typePokemon', pokemonTypes); // verificar se vai ser util ter  o pokemonType salvo no id para  a janela de detalhes com o Giovane
