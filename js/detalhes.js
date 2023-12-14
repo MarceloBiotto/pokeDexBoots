@@ -1,4 +1,6 @@
 let pkType1 = document.querySelector('#pokeType1');
+
+
  
 async function pokeInfo(){
     const pokemonGerado =   localStorage.getItem('idPokemon');
