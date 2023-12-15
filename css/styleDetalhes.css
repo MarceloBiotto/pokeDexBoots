@@ -22,7 +22,7 @@ body {
 }
 
 #pkmn {
-    width: 150px;
+    width: 100px;
 }
 
 .card-body {
@@ -36,6 +36,7 @@ body {
 .card-title {
     margin: 0px 0px 5px;
     width: 150px;
+    background-image: linear-gradient(to right, rgba(128, 128, 128, 0.6) , rgba(255, 255, 255, 0.3))
 }
 
 .container {
@@ -54,14 +55,18 @@ body {
 
 .card__botao-next{
     position: absolute;
-    bottom: 22%;
-    left: 72%;
-    width: 2.8%;
+    bottom: 24.3%;
+    left: 71.7%;
+    width: 2.5%;
+    height: 3.1%;
+    background-color: transparent;
 }
 .card__botao-prev{
     position: absolute;
-    bottom: 22%;
-    left: 67.5%;
-    width: 2.8%;
+    bottom: 24.3%;
+    left: 68%;
+    width: 2.5%;
+    height: 3.1%;
+    background-color: transparent;
 }
 
