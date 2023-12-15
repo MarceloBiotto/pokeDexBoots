@@ -8,6 +8,7 @@ body {
 }
 
 .card {
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -15,8 +16,8 @@ body {
     flex-direction: row;
     position: absolute;
     height: 200px;
-    width: 340px;
-    left: 40%;
+    width: 290px;
+    left: 41%;
     top: 53%;
 }
 
@@ -26,13 +27,14 @@ body {
 
 .card-body {
     padding: 0;
-    margin: 0;
-    width: 150px;
+    margin: 0px 0px 10px;
+    width: 140px;
     height: 120px;
     list-style: none;
 }
 
 .card-title {
+    margin: 0px 0px 5px;
     width: 150px;
 }
 
@@ -48,12 +50,4 @@ body {
 
 .btn-primary {
     position: relative;
-}
-
-@media screen and (max-width: 1400px) {
-
-    .card {
-        left: 38%;
-        top: 53%;
-    }
 }

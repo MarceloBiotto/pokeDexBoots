@@ -1,0 +1,22 @@
+@media screen and (max-width: 1400px) {
+
+    .card {
+        left: 38%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .card {
+        left: 34%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .poke-imagem {
+        
+    }
+
+}
