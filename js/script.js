@@ -26,7 +26,7 @@
       const pokemonElement = document.createElement('li');
 
       pokemonElement.classList.add('pokemon__lista', 'card', 'align-items-center', 'text-center', 'd-flex', 'col-4', 'm-2', 'shadow', `${pokemonData.types.map(typePoke => typePoke.type.name)[0]}`);
-      pokemonElement.innerHTML = `
+         pokemonElement.innerHTML = `
           <div class="descricao-pokemon ">
           
             <p>ID: ${pokemonData.id}</p>
@@ -39,11 +39,9 @@
       `;
       
 
-      // localStorage.setItem('typePokemon', pokemonTypo);
-      // pintaCard();
 
 
-      containerPokemon.appendChild(pokemonElement);
+      await containerPokemon.appendChild(pokemonElement);
 
       
       pokemonElement.addEventListener('click', () => {
@@ -57,14 +55,7 @@
 
 
     });
-    // console.log(tipoPoke);
-  //   async function pintaCard(){
-  //     let pintaCard = localStorage.getItem('typePokemon');
-  //     if(pintaCard == 'fire'){
-  //         pokemonElement.classList.add('.fire');
-  //     }
-  
-  // }
+ 
 
   });
   }catch(error){

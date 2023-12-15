@@ -15,3 +15,57 @@
 .fire{
     background-color: red;
 }
+.normal{
+    background-color: grey;
+}
+.fighting{
+    background-color: darkred;
+}
+.water{
+    background-color: blue;
+}
+.flying{
+    background-color: rgb(185, 106, 250);
+}
+.grass{
+    background-color: green;
+}
+.poison{
+    background-color: purple;
+}
+.electric{
+    background-color: yellow;
+}
+.ground{
+    background-color: brown;
+}
+.psychic{
+    background-color: rgb(255, 0, 128);
+}
+.rock{
+    background-color: burlywood;
+}
+.ice{
+    background-color: rgb(0, 255, 242);
+}
+.bug{
+    background-color: rgb(70, 70, 2);
+}
+.dragon{
+    background-color: rgb(85, 28, 241);
+}
+.ghost{
+    background-color: rgb(141, 88, 141);
+}
+.dark{
+    background-color: rgb(87, 73, 73);
+}
+.steel{
+    background-color: rgb(124, 120, 120);
+}
+.fairy{
+    background-color: pink;
+}
+.stellar{
+    background-color: darkgreen;
+}
