@@ -5,13 +5,13 @@
     }
     .card__botao-next{
         position: absolute;
-        bottom: 27%;
+        bottom: 34.5%;
         left: 80%;
         width: 3.8%;
     }
     .card__botao-prev{
         position: absolute;
-        bottom: 27%;
+        bottom: 34.5%;
         left: 74%;
         width: 3.8%;
     }
@@ -24,13 +24,13 @@
     }
     .card__botao-next{
         position: absolute;
-        bottom: 21%;
+        bottom: 27%;
         left: 89%;
         width: 3.8%;
     }
     .card__botao-prev{
         position: absolute;
-        bottom: 21%;
+        bottom: 27%;
         left: 82%;
         width: 3.8%;
     }

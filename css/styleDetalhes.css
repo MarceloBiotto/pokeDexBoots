@@ -54,13 +54,13 @@ body {
 
 .card__botao-next{
     position: absolute;
-    bottom: 23%;
+    bottom: 22%;
     left: 72%;
     width: 2.8%;
 }
 .card__botao-prev{
     position: absolute;
-    bottom: 23%;
+    bottom: 22%;
     left: 67.5%;
     width: 2.8%;
 }
