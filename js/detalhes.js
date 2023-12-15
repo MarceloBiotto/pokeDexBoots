@@ -16,7 +16,7 @@ async function pokeInfo(){
     pkId.innerHTML = poke.id;
     pkWeight.innerHTML = poke.weight;
     pkType1.innerHTML = poke.types.map(typePoke => typePoke.type.name);
-
+    
 
 
    }

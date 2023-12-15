@@ -88,8 +88,8 @@ inputBusca.addEventListener('click', async (e) => {
 
 
 let maisPokemon = document.querySelector('.maisPoke');
-let contador = 0;
-
+let contador;
+let menosPokemon = document.querySelector('.menosPoke');
 
 
 maisPokemon.addEventListener('click', (e)=>{
@@ -102,4 +102,19 @@ maisPokemon.addEventListener('click', (e)=>{
  buscarEMostrarPokemons(contador, offset);
  
 
-})
+});
+
+menosPokemon.addEventListener('click', (e)=>{
+  e.preventDefault();
+  const offset = localStorage.getItem('pagination');
+  if(contador <=20){
+    menosPokemon.style.display = 'none';
+  }
+  contador -= 20;
+  localStorage.setItem('pagination', contador)
+
+ 
+ buscarEMostrarPokemons(contador, offset);
+ 
+
+});
