@@ -105,17 +105,3 @@ maisPokemon.addEventListener('click', (e)=>{
 
 });
 
-menosPokemon.addEventListener('click', (e)=>{
-  e.preventDefault();
-  const offSet = localStorage.getItem('pagination');
-  if(contador < 20){
-    menosPokemon.style.display = "none";
-  }
-  contador -= 20;
-  localStorage.setItem('pagination', contador)
-
- 
- buscarEMostrarPokemons(contador, offSet);
- 
-
-});
