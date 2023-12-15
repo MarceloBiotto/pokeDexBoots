@@ -98,7 +98,7 @@ let menosPokemon = document.querySelector('.menosPoke');
 
 maisPokemon.addEventListener('click', (e)=>{
   e.preventDefault();
-  const offSet = localStorage.getItem('pagination');
+  let offSet = localStorage.getItem('pagination');
   contador += 20;
   localStorage.setItem('pagination', contador)
 

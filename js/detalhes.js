@@ -1,6 +1,6 @@
 let pkType1 = document.querySelector('#pokeType1');
-
-
+let hp = document.querySelector('#statsHp');
+let atk = document.querySelector('#statsAtk');
  
 async function pokeInfo(){
     const pokemonGerado =   localStorage.getItem('idPokemon');
@@ -16,12 +16,16 @@ async function pokeInfo(){
     pkId.innerHTML = poke.id;
     pkWeight.innerHTML = poke.weight;
     pkType1.innerHTML = poke.types.map(typePoke => typePoke.type.name);
-    
+    // hp.innerHTML += poke.stats.map(statsPoke => statsPoke.base_stat)[0];
+    // atk.innerHTML += poke.stats.map(statsPoke => statsPoke.base_stat)[1];
+    let listaStats =poke.stats.map(statsPoke => statsPoke.base_stat);
+    atk.innerHTML = listaStats;
+    console.log(listaStats)
 
 
    }
 
-   pokeInfo();
+  //  pokeInfo();
 
 
 
@@ -33,7 +37,9 @@ async function pokeInfo(){
     pokeImagem.src = pokeUptadeAtribute['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
     pkId.innerHTML = pokeUptadeAtribute.id;
     pkWeight.innerHTML = pokeUptadeAtribute.weight;
-
+    let listaStatsAtributes =pokeUptadeAtribute.stats.map(statsPoke => statsPoke.base_stat);
+    atk.innerHTML = listaStatsAtributes;
+    console.log(listaStats)
     
     pkType1.innerHTML = pokeUptadeAtribute.types.map(typePoke => typePoke.type.name).join(', ');
   
