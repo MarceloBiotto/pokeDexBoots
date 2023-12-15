@@ -3,12 +3,36 @@
     .card {
         left: 38%;
     }
+    .card__botao-next{
+        position: absolute;
+        bottom: 27%;
+        left: 80%;
+        width: 3.8%;
+    }
+    .card__botao-prev{
+        position: absolute;
+        bottom: 27%;
+        left: 74%;
+        width: 3.8%;
+    }
 }
 
 @media screen and (max-width: 991px) {
 
     .card {
         left: 34%;
+    }
+    .card__botao-next{
+        position: absolute;
+        bottom: 21%;
+        left: 89%;
+        width: 3.8%;
+    }
+    .card__botao-prev{
+        position: absolute;
+        bottom: 21%;
+        left: 82%;
+        width: 3.8%;
     }
 
 }
@@ -18,5 +42,6 @@
     .poke-imagem {
         
     }
+
 
 }
