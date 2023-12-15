@@ -6,7 +6,8 @@
   let pkType2 = document.querySelector('#pokeType2');
   let pkWeight = document.querySelector('#weight');
   let inputBusca = document.querySelector('.inputBuscar');
-  
+  // let tipoPoke = document.querySelector('.pokemon-type').value;
+
 
 
   async function buscarEMostrarPokemons(contador = 20 , offSet = 0 ) {
@@ -23,19 +24,23 @@
       response.forEach(async (pokemon) => {
       const pokemonData = await fetch(pokemon.url).then(response => response.json());
       const pokemonElement = document.createElement('li');
-      pokemonElement.classList.add('pokemon__lista', 'card', 'align-items-center', 'text-center', 'd-flex', 'col-4', 'm-2', 'shadow');
+
+      pokemonElement.classList.add('pokemon__lista', 'card', 'align-items-center', 'text-center', 'd-flex', 'col-4', 'm-2', 'shadow', `${pokemonData.types.map(typePoke => typePoke.type.name)[0]}`);
       pokemonElement.innerHTML = `
-          <div class="descricao-pokemon">
+          <div class="descricao-pokemon ">
           
             <p>ID: ${pokemonData.id}</p>
             <p>Name: <span class= "pokemon-name">${pokemonData.name}</span></p>
             <img class="img-pokemon img-fluid" src="${pokemonData.sprites.front_default}" alt="imagem pokemon">
-            <p class= "pokemon-type">Type: ${pokemonData.types.map(typePoke => typePoke.type.name)}
+            <p >Type: ${pokemonData.types.map(typePoke => typePoke.type.name)}
           </div>
         </li>
        
       `;
+      
 
+      // localStorage.setItem('typePokemon', pokemonTypo);
+      // pintaCard();
 
 
       containerPokemon.appendChild(pokemonElement);
@@ -47,12 +52,19 @@
         const pokemonTypes =pokemonData.types.map(typePoke => typePoke.type.name);
         localStorage.setItem('namePokemon', pokemonClicado);
         localStorage.setItem('idPokemon', idPokemonClicado)
-        localStorage.setItem('typePokemon', pokemonTypes); // verificar se vai ser util ter  o pokemonType salvo no id para  a janela de detalhes com o Giovane
+        localStorage.setItem('typePokemon', pokemonTypes);
         window.location.href = 'pokemonDetalhes.html';
 
 
     });
-
+    // console.log(tipoPoke);
+  //   async function pintaCard(){
+  //     let pintaCard = localStorage.getItem('typePokemon');
+  //     if(pintaCard == 'fire'){
+  //         pokemonElement.classList.add('.fire');
+  //     }
+  
+  // }
 
   });
   }catch(error){
