@@ -12,7 +12,7 @@ async function pokeInfo(){
 
     
     pkmName.innerHTML = poke.name;
-    pokeImagem.src = poke.sprites.front_default;
+    pokeImagem.src = poke['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
     pkId.innerHTML = poke.id;
     pkWeight.innerHTML = poke.weight;
     pkType1.innerHTML = poke.types.map(typePoke => typePoke.type.name);
@@ -30,7 +30,7 @@ async function pokeInfo(){
     const pokeUptadeAtribute = await responseUptade.json();
 
     pkmName.innerHTML = pokeUptadeAtribute.name;
-    pokeImagem.src = pokeUptadeAtribute.sprites.front_default;
+    pokeImagem.src = pokeUptadeAtribute['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
     pkId.innerHTML = pokeUptadeAtribute.id;
     pkWeight.innerHTML = pokeUptadeAtribute.weight;
 
