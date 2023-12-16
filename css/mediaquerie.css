@@ -1,3 +1,14 @@
+@media screen and (max-width: 1600px) {
+    .card__botao-next{
+        bottom: 22.8%;
+        height: 3.4%;
+    }
+    .card__botao-prev{
+        bottom: 22.8%;
+        height: 3.4%;
+    }
+}
+
 @media screen and (max-width: 1400px) {
 
     .card {
