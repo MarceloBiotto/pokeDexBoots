@@ -55,7 +55,7 @@ body {
 
 .card__botao-next{
     position: absolute;
-    bottom: 24.3%;
+    bottom: 29%;
     left: 71.7%;
     width: 2.5%;
     height: 3.1%;
@@ -63,7 +63,7 @@ body {
 }
 .card__botao-prev{
     position: absolute;
-    bottom: 24.3%;
+    bottom: 29%;
     left: 68%;
     width: 2.5%;
     height: 3.1%;

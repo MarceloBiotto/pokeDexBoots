@@ -33,18 +33,6 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .card__botao-next{
-        bottom: 22.8%;
-        height: 3.4%;
-    }
-    .card__botao-prev{
-        bottom: 22.8%;
-        height: 3.4%;
-        left: 74.5%;
-    }
-}
-
 @media screen and (max-width: 1199px) {
     .card__botao-next{
         bottom: 22.8%;
@@ -55,6 +43,18 @@
         bottom: 22.8%;
         left: 74.6%;
         width: 3.8%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .card__botao-next{
+        bottom: 22.8%;
+        height: 3.4%;
+    }
+    .card__botao-prev{
+        bottom: 22.8%;
+        height: 3.4%;
+        left: 74.5%;
     }
 }
 
