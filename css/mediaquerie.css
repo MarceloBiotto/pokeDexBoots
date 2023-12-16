@@ -9,6 +9,8 @@
     }
 }
 
+/* Adicionar minimo*/
+
 @media screen and (max-width: 1600px) {
     .card__botao-next{
         bottom: 22.8%;
