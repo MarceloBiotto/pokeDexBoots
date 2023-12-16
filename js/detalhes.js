@@ -19,7 +19,6 @@ async function pokeInfo(){
     // hp.innerHTML += poke.stats.map(statsPoke => statsPoke.base_stat)[0];
     // atk.innerHTML += poke.stats.map(statsPoke => statsPoke.base_stat)[1];
     let listaStats =poke.stats.map(statsPoke => statsPoke.base_stat);
-    atk.innerHTML = listaStats;
     console.log(listaStats)
     if(pokeImagem.src == poke.sprites.front_default){ // verificar essa logica
       pkmImagem.style.width =  "50%";
