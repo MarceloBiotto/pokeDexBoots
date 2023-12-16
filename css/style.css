@@ -11,7 +11,9 @@
     flex-direction: column;
     justify-content: center;
 }
-
+.hidden{
+    display: none;
+}
 .fire{
     background-color: red;
 }

@@ -31,12 +31,14 @@ body {
     width: 140px;
     height: 120px;
     list-style: none;
+    
 }
 
 .card-title {
     margin: 0px 0px 5px;
     width: 150px;
-    background-image: linear-gradient(to right, rgba(128, 128, 128, 0.6) , rgba(255, 255, 255, 0.3))
+    background-image: linear-gradient(to right, rgba(128, 128, 128, 0.6) , rgba(255, 255, 255, 0.3));
+    font-size: 15px;
 }
 
 .container {
