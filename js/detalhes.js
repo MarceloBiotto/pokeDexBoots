@@ -31,11 +31,11 @@ async function pokeInfo(){
     let listaStats =poke.stats.map(statsPoke => statsPoke.base_stat);
     console.log("eu sou a universal: " ,listaStats[3])
     let hpConvertido = listaStats[0];
-    const atkConvertido = listaStats[1];
-    const defConvertido = listaStats[2];
-    const spAtkConvertido = listaStats[3];
-    const spDefConvertido = listaStats[4];
-    const speedConvertido = listaStats[5];
+    let atkConvertido = listaStats[1];
+    let defConvertido = listaStats[2];
+    let spAtkConvertido = listaStats[3];
+    let spDefConvertido = listaStats[4];
+    let speedConvertido = listaStats[5];
 
     console.log('aqui esta meu hp: ', hpConvertido)
 
@@ -69,7 +69,8 @@ async function pokeInfo(){
    async function pokeUpdate() {
     const responseUptade = await fetch(`https://pokeapi.co/api/v2/pokemon/${currentId}`);
     const pokeUptadeAtribute = await responseUptade.json();
-    
+
+
     pkmName.innerHTML = pokeUptadeAtribute.name;
     pokeImagem.src = pokeUptadeAtribute['sprites']['versions']['generation-v']['black-white']['animated']['front_default'] ||  pokeUptadeAtribute.sprites.front_default;
     let pkmImagem= document.querySelector('#pkmn');
@@ -79,25 +80,30 @@ async function pokeInfo(){
     pkId.innerHTML = pokeUptadeAtribute.id;
     pkWeight.innerHTML = pokeUptadeAtribute.weight;
 
-
+    
 
     let listaStatsAtributes =pokeUptadeAtribute.stats.map(statsPoke => statsPoke.base_stat); //aqui esta a lista para não perde-la
 
-     let hpConvertido = listaStatsAtributes[0];
-     console.log(hpConvertido);
+    let  hpConvertidoUptade = listaStatsAtributes[0];
+    let  atakConvertidoUptade = listaStatsAtributes[1];
+    let  defConvertidoUptade = listaStatsAtributes[2];
+    let  spatkConvertidoUptade = listaStatsAtributes[3];
+    let  spdefConvertidoUptade = listaStatsAtributes[4];
+    let  speedConvertidoUptade = listaStatsAtributes[5];
 
-    
-  
-    
-
-
-
+    baseHp.innerHTML = hpConvertidoUptade;
+    baseAtk.innerHTML = atakConvertidoUptade;
+    baseDef.innerHTML = defConvertidoUptade;
+    baseSpatk.innerHTML = spatkConvertidoUptade;
+    baseSpDef.innerHTML = spdefConvertidoUptade;
+    baseSpeed.innerHTML =  speedConvertidoUptade;
 
     pkType1.innerHTML = pokeUptadeAtribute.types.map(typePoke => typePoke.type.name).join(', ');
   
 
     localStorage.setItem('idPokemon', pkId);
 }
+
 
 let idPokemonGerado =   localStorage.getItem('idPokemon');
 document.addEventListener("DOMContentLoaded", () => {
