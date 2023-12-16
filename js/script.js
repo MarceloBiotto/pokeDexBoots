@@ -17,12 +17,13 @@
     // const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=20"); // essa esta funcionando, estamos testando a pagination 
     // com a response a baixo;
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${contador}&offset=${offSet}`)
-                          .then(response => response.json())
-                          .then(data => data.results)
-                          .catch(error => console.error("Houve um erro na chamada da API: ", error));
-  
-      response.forEach(async (pokemon) => {
-      const pokemonData = await fetch(pokemon.url).then(response => response.json());
+                          // .then(response => response.json())
+                          // .then(data => data.results)
+                          // .catch(error => console.error("Houve um erro na chamada da API: ", error));
+      const data = await response.json();
+      const pokemons = data.results;
+      for(const pokemon of pokemons){
+        const pokemonData = await fetch(pokemon.url).then(response => response.json());
       const pokemonElement = document.createElement('li');
 
       pokemonElement.classList.add('pokemon__lista', 'card', 'align-items-center', 'text-center', 'd-flex', 'col-4', 'm-2', 'shadow', `${pokemonData.types.map(typePoke => typePoke.type.name)[0]}`);
@@ -55,9 +56,9 @@
 
 
     });
- 
-
-  });
+      }
+  
+    
   }catch(error){
     pokemonElement.innerHTML += `<p> Houve um erro ao carregar os pokemons: ${error}</p>`
   }
@@ -98,7 +99,7 @@ let menosPokemon = document.querySelector('.menosPoke');
 
 maisPokemon.addEventListener('click', (e)=>{
   e.preventDefault();
-  let offSet = localStorage.getItem('pagination');
+  const offSet = localStorage.getItem('pagination');
   contador += 20;
   localStorage.setItem('pagination', contador)
 
