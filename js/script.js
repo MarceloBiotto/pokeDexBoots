@@ -17,9 +17,7 @@
     // const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=20"); // essa esta funcionando, estamos testando a pagination 
     // com a response a baixo;
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${contador}&offset=${offSet}`)
-                          // .then(response => response.json())
-                          // .then(data => data.results)
-                          // .catch(error => console.error("Houve um erro na chamada da API: ", error));
+                   
       const data = await response.json();
       const pokemons = data.results;
       for(const pokemon of pokemons){

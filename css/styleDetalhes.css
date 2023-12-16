@@ -40,12 +40,10 @@ body {
     background-image: linear-gradient(to right, rgba(128, 128, 128, 0.6) , rgba(255, 255, 255, 0.3));
     font-size: 15px;
 }
-.card-title-stats{
-    width: auto;
-}
+
 .col-1{
 padding: 1px;
-margin-right: 5px;
+margin-right: 24px;
 }
 
 .container {

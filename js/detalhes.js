@@ -37,7 +37,33 @@ async function pokeInfo(){
     let spDefConvertido = listaStats[4];
     let speedConvertido = listaStats[5];
 
-    console.log('aqui esta meu hp: ', hpConvertido)
+    
+    // document.getElementById("hp").innerHTML = hpConvertido;
+    // document.getElementById("atk").innerHTML = atkConvertido;
+    // document.getElementById("def").innerHTML = defConvertido;
+    // document.getElementById("spAtk").innerHTML = spAtkConvertido;
+    // document.getElementById("spDef").innerHTML = spDefConvertido;
+    // document.getElementById("speed").innerHTML = speedConvertido;
+    
+    // let stats = {
+    //   hp: baseHP,
+    //   atk: baseAtk,
+    //   def: baseDef,
+    //   spAtk: baseSpatk,
+    //   spDef: baseSdef,
+    //   speed: speed
+    // };
+    // const maxValue = 250; 
+      
+    // for (const stat in stats) {
+    //   const value = stats[stat];
+    
+    //   const progressBar = document.getElementById(stat);
+    //   const percentage = (value / maxValue) * 200;
+    
+    //   progressBar.style.width = `${percentage}%`;
+    // }
+
 
     baseHp.innerHTML += hpConvertido;
     baseAtk.innerHTML += atkConvertido;
