@@ -1,5 +1,5 @@
 let pkType1 = document.querySelector('#pokeType1');
-let baseHp = document.querySelector('.statAtk');
+let baseHp = document.querySelector('.statHp');
 let baseAtk = document.querySelector('.statAtk');
 let baseDef = document.querySelector('.statDef')
 let baseSpatk = document.querySelector('.statSpatk')
@@ -7,6 +7,7 @@ let baseSpDef = document.querySelector('.statSdef')
 let baseSpeed = document.querySelector('.statSpeed');
 let buttonStat = document.querySelector('.button__stats');
 let mudaCard = document.querySelectorAll('.card-title');
+
 async function pokeInfo(){
     const pokemonGerado =   localStorage.getItem('idPokemon');
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
@@ -28,13 +29,22 @@ async function pokeInfo(){
     // hp.innerHTML += poke.stats.map(statsPoke => statsPoke.base_stat)[0];
     // atk.innerHTML += poke.stats.map(statsPoke => statsPoke.base_stat)[1];
     let listaStats =poke.stats.map(statsPoke => statsPoke.base_stat);
-    console.log("eu sou a universal: " ,listaStats)
-    const hpConvertido = listaStats[0].value;
+    console.log("eu sou a universal: " ,listaStats[3])
+    let hpConvertido = listaStats[0];
     const atkConvertido = listaStats[1];
     const defConvertido = listaStats[2];
-    const spAtk = listaStats[3];
-    const spDef = listaStats[4];
-    const speed = listaStats[5];
+    const spAtkConvertido = listaStats[3];
+    const spDefConvertido = listaStats[4];
+    const speedConvertido = listaStats[5];
+
+    console.log('aqui esta meu hp: ', hpConvertido)
+
+    baseHp.innerHTML += hpConvertido;
+    baseAtk.innerHTML += atkConvertido;
+    baseDef.innerHTML += defConvertido
+    baseSpatk.innerHTML += spAtkConvertido;
+    baseSpDef.innerHTML += spDefConvertido;
+    baseSpeed.innerHTML += speedConvertido;
 
     buttonStat.addEventListener('click', (e) => {
       e.preventDefault();
@@ -42,6 +52,7 @@ async function pokeInfo(){
         card.classList.toggle('hidden');
       });
     });
+   
 
 
 
@@ -72,7 +83,7 @@ async function pokeInfo(){
 
     let listaStatsAtributes =pokeUptadeAtribute.stats.map(statsPoke => statsPoke.base_stat); //aqui esta a lista para não perde-la
 
-     const hpConvertido = listaStatsAtributes[0];
+     let hpConvertido = listaStatsAtributes[0];
      console.log(hpConvertido);
 
     
