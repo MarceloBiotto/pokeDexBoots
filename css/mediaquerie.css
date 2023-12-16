@@ -1,3 +1,14 @@
+@media screen and (max-width: 2560px) {
+    .card__botao-next{
+        bottom: 22.8%;
+        height: 3.4%;
+    }
+    .card__botao-prev{
+        bottom: 22.8%;
+        height: 3.4%;
+    }
+}
+
 @media screen and (max-width: 1600px) {
     .card__botao-next{
         bottom: 22.8%;
@@ -9,21 +20,40 @@
     }
 }
 
-@media screen and (max-width: 1400px) {
-
-    .card {
-        left: 38%;
-    }
+@media screen and (max-width: 1399px) {
     .card__botao-next{
-        position: absolute;
-        bottom: 34.5%;
+        bottom: 22.8%;
+        height: 3.4%;
+        left: 75.5%;
+    }
+    .card__botao-prev{
+        bottom: 22.8%;
+        height: 3.4%;
+        left: 71%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .card__botao-next{
+        bottom: 22.8%;
+        height: 3.4%;
+    }
+    .card__botao-prev{
+        bottom: 22.8%;
+        height: 3.4%;
+        left: 74.5%;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .card__botao-next{
+        bottom: 22.8%;
         left: 80%;
         width: 3.8%;
     }
     .card__botao-prev{
-        position: absolute;
-        bottom: 34.5%;
-        left: 74%;
+        bottom: 22.8%;
+        left: 74.6%;
         width: 3.8%;
     }
 }
@@ -34,14 +64,12 @@
         left: 34%;
     }
     .card__botao-next{
-        position: absolute;
-        bottom: 27%;
+        bottom: 23.5%;
         left: 89%;
         width: 3.8%;
     }
     .card__botao-prev{
-        position: absolute;
-        bottom: 27%;
+        bottom: 23.5%;
         left: 82%;
         width: 3.8%;
     }
