@@ -1,3 +1,11 @@
+.page-one {
+    height: 100vh;
+    background-image: url(/assets/img/PokemonSwordShield_01.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .pokemon__lista{
     width: 200px;
 }
@@ -15,59 +23,59 @@
     display: none;
 }
 .fire{
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.8);
 }
 .normal{
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.8);
 }
 .fighting{
-    background-color: darkred;
+    background-color: rgba(139, 0, 0, 0.8);
 }
 .water{
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.8);
 }
 .flying{
-    background-color: rgb(185, 106, 250);
+    background-color: rgb(185, 106, 250, 0.8);
 }
 .grass{
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.8);
 }
 .poison{
-    background-color: purple;
+    background-color: rgba(128, 0, 128, 0.8);
 }
 .electric{
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.8);
 }
 .ground{
-    background-color: brown;
+    background-color: rgba(165, 42, 42, 0.8);
 }
 .psychic{
-    background-color: rgb(255, 0, 128);
+    background-color: rgb(255, 0, 128, 0.8);
 }
 .rock{
-    background-color: burlywood;
+    background-color: rgba(222, 184, 135, 0.8);
 }
 .ice{
-    background-color: rgb(0, 255, 242);
+    background-color: rgb(0, 255, 242, 0.8);
 }
 .bug{
-    background-color: rgb(70, 70, 2);
+    background-color: rgb(70, 70, 2, 0.8);
 }
 .dragon{
-    background-color: rgb(85, 28, 241);
+    background-color: rgb(85, 28, 241, 0.8);
 }
 .ghost{
-    background-color: rgb(141, 88, 141);
+    background-color: rgb(141, 88, 141, 0.8);
 }
 .dark{
-    background-color: rgb(87, 73, 73);
+    background-color: rgb(87, 73, 73, 0.8);
 }
 .steel{
-    background-color: rgb(124, 120, 120);
+    background-color: rgb(124, 120, 120, 0.8);
 }
 .fairy{
-    background-color: pink;
+    background-color: rgba(255, 192, 203, 0.8);
 }
 .stellar{
-    background-color: darkgreen;
+    background-color: rgba(0, 100, 0, 0.8);
 }

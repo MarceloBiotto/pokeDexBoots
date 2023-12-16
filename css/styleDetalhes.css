@@ -34,10 +34,16 @@ body {
     
 }
 
-.card-title {
+.card-color {
     margin: 0px 0px 5px;
-    width: 120px;
+    width: 150px;
     background-image: linear-gradient(to right, rgba(128, 128, 128, 0.6) , rgba(255, 255, 255, 0.3));
+    font-size: 15px;
+}
+
+.poke-info {
+    padding-left: 5px;
+    margin: 0px 0px 5px;
     font-size: 15px;
 }
 
