@@ -60,18 +60,30 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .poke__size {
+        max-width: 80%;
+    }
+
+    .card {
+        left: 38%;
+        top: 53%;
+    }
+
     .card__botao-next{
-        bottom: 22.8%;
-        height: 3.4%;
+        bottom: 20%;
+        height: 4%;
+        width: 3%;
+        left: 80.3%;
     }
     .card__botao-prev{
-        bottom: 22.8%;
-        height: 3.4%;
-        left: 74.5%;
+        bottom: 20%;
+        height: 4%;
+        width: 3%;
+        left: 74.8%;
     }
 }
 
-@media screen and (max-width: 991px) {
+/*@media screen and (max-width: 991px) {
 
     .card {
         left: 34%;
@@ -87,13 +99,111 @@
         width: 3.8%;
     }
 
-}
+}*/
 
-@media screen and (max-width: 767px) {
-
-    .poke-imagem {
-        
+@media screen and (max-width: 768px) {
+    #pkmn {
+        width: 90px;
     }
 
+    .poke__size {
+        max-width: 95%;
+    }
 
+    .card {
+        left: 34%;
+        top: 50%;
+    }
+
+    .card__botao-next{
+        bottom: 22.4%;
+        left: 87%;
+        width: 3.8%;
+    }
+    .card__botao-prev{
+        bottom: 22.4%;
+        left: 80.5%;
+        width: 3.8%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    #pkmn {
+        width: 90px;
+    }
+
+    .card {
+        left: 15%;
+        top: 25%;
+    }
+
+    .card__botao-next{
+        bottom: 30%;
+        left: 80%;
+        height: 3.5%;
+        width: 6.5%;
+    }
+    .card__botao-prev{
+        bottom: 30%;
+        left: 68%;
+        height: 3.5%;
+        width: 6%;
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    #pkmn {
+        width: 80px;
+    }
+
+    .card {
+        left: 12%;
+        top: 27%;
+    }
+
+    .card__botao-next{
+        bottom: 31%;
+        left: 83%;
+        height: 3.5%;
+        width: 7%;
+    }
+    .card__botao-prev{
+        bottom: 31%;
+        left: 69%;
+        height: 3.5%;
+        width: 7%;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+    #pkmn {
+        width: 70px;
+    }
+
+    .card {
+        left: 10%;
+        top: 25%;
+        width: 80%;
+    }
+
+    .poke-info {
+        width: 100px;
+    }
+
+    .card__botao-next{
+        bottom: 32%;
+        left: 82%;
+        height: 3.5%;
+        width: 8%;
+    }
+    .card__botao-prev{
+        bottom: 32%;
+        left: 69%;
+        height: 3.5%;
+        width: 8%;
+    }
+    
 }
