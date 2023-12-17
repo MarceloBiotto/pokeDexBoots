@@ -1,9 +1,10 @@
 .page-one {
-    height: 100vh;
+    height: 98vh;
     background-image: url(/assets/img/PokemonSwordShield_01.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 .pokemon__lista{
@@ -22,6 +23,12 @@
 .hidden{
     display: none;
 }
+
+.central-box {
+
+    width: 100%;
+}
+
 .fire{
     background-color: rgba(255, 0, 0, 0.8);
 }

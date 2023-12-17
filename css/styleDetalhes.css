@@ -1,10 +1,10 @@
 body {
     height: 100vh;
     background-image: url(/assets/img/pokedex-bg.jpg);
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 .card {
@@ -17,7 +17,7 @@ body {
     position: absolute;
     height: 200px;
     width: 290px;
-    left: 41%;
+    left: 40%;
     top: 53%;
 }
 
@@ -36,7 +36,7 @@ body {
 
 .card-color {
     margin: 0px 0px 5px;
-    width: 150px;
+    width: 160px;
     background-image: linear-gradient(to right, rgba(128, 128, 128, 0.6) , rgba(255, 255, 255, 0.3));
     font-size: 15px;
 }
