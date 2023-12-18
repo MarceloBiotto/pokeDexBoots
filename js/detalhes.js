@@ -96,7 +96,7 @@ async function pokeInfo() {
       card.classList.toggle('hidden2');
       if(fraquezasList.classList.contains('hidden')){
         fraquezasList.classList.remove('hidden');
-      } // verificar aqui se esta funcionando
+      } 
     });
 
     await showWeaknesses(poke);
