@@ -34,16 +34,7 @@
     }
 }
 
-@media screen and (max-width: 1400px) {
-    .container {
-        height: 90vh;
-    }
 
-    .poke__size {
-        max-width: 60%;
-    }
-    
-}
 
 @media screen and (max-width: 1360px) {
     .card {
@@ -214,4 +205,41 @@
         width: 8%;
     }
     
+}
+@media screen and (min-width:1025px) and    (max-width: 1441px)  {
+    .container {
+        height: 90vh;
+    }
+    .button__click {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        width: 4.68rem;
+        height: 4.68rem;
+        background-color: rgba(255, 255, 255, 0.349);
+        bottom: 20.5%;
+        left: 66.7%;
+    }
+    
+    .poke__size {
+        max-width: 60%;
+    }
+    
+}
+@media screen and (min-width:1042px) and (max-width: 1600px)  {
+    .button__click {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+         position: fixed; 
+         width: 4.68rem;
+         height: 4.68rem; 
+        background-color: rgba(255, 255, 255, 0.349);
+        bottom: 13%;
+        left: 65.4%;
+    }   
+    
+
+
 }

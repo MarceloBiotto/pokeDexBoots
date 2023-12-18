@@ -80,11 +80,13 @@ async function pokeInfo() {
   baseSpDef.innerHTML += spDefConvertido;
   baseSpeed.innerHTML += speedConvertido;
 
-  buttonStat.addEventListener('click', (e) => {
+  buttonStat.addEventListener('click', async(e) => {
     e.preventDefault();
     mudaCard.forEach((card) => {
       card.classList.toggle('hidden');
-      if(fraquezasList.classList.contains('hidden')){
+      if(habilidadesPoke.classList.contains('hidden')){
+        habilidadesPoke.classList.remove('hidden');
+      }else if(fraquezasList.classList.contains('hidden')){
         fraquezasList.classList.remove('hidden');
       }
       
