@@ -7,11 +7,12 @@ let baseSpDef = document.querySelector('.statSdef')
 let baseSpeed = document.querySelector('.statSpeed');
 let buttonStat = document.querySelector('.button__stats');
 let mudaCard = document.querySelectorAll('.card-title');
+let weaknessesText = document.querySelector('.textfraqueza');
 let buttonFraq = document.querySelector('.button__fraqueza')
+let fraquezas = document.querySelector('.fraqueza');
+let fraquezasList = document.querySelector('.fraquezas-list');
+let uniqueWeaknesses;
 
-  let uniqueWeaknesses;
-
-fraquezas = localStorage.getItem('fraqueza');
 async function pokeInfo(){
     const pokemonGerado =   localStorage.getItem('idPokemon');
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
@@ -59,14 +60,23 @@ async function pokeInfo(){
       });
     });
 
-    buttonFraq.addEventListener('click', async(e) => {
+    buttonFraq.addEventListener('click', async (e) => {
       e.preventDefault();
       mudaCard.forEach(card => {
         card.classList.toggle('hidden2');
-      
       });
-     
+    
+      await showWeaknesses();
     });
+    
+    async function showWeaknesses() {
+      await fraquezas();
+      fraquezasList.innerHTML = "";
+    
+      if (localStorage.getItem('fraqueza')) {
+        fraquezasList.innerHTML = localStorage.getItem('fraqueza');
+      }
+    }
 
 
 
@@ -85,18 +95,16 @@ async function fraquezas() {
       );
     });
 
-    const allWeaknessesArrays = await Promise.all(weaknessesPromises);
 
-    const allWeaknesses = allWeaknessesArrays.flat();
+    const allWeaknesses = await Promise.all(weaknessesPromises);
 
     console.log(allWeaknesses);
 
-
-    const uniqueWeaknesses = [...new Set(allWeaknesses)];
+    const uniqueWeaknesses = [...new Set(allWeaknesses.flat())];
 
     const weaknessesText =
       uniqueWeaknesses.length > 0
-        ? `<p>Fraquezas: ${uniqueWeaknesses.join(", ")}</p>`
+        ? `<p>Fraquezas:${uniqueWeaknesses.join(", ")}</p>`
         : "";
 
     localStorage.setItem('fraqueza', weaknessesText);
