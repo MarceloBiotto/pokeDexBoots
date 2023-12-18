@@ -59,7 +59,7 @@ async function pokeInfo(){
       });
     });
 
-    buttonFraq.addEventListener('click', (e) => {
+    buttonFraq.addEventListener('click', async(e) => {
       e.preventDefault();
       mudaCard.forEach(card => {
         card.classList.toggle('hidden2');
