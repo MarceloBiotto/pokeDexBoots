@@ -11,19 +11,19 @@ let weaknessesText = document.querySelector('.textfraqueza');
 let buttonFraq = document.querySelector('.button__fraqueza');
 let fraquezasList = document.querySelector('.fraquezas-list');
 
-async function updateCard(pokeData) {
-  pkmName.innerHTML = pokeData.name;
+async function updateCard(poke) {
+  pkmName.innerHTML = poke.name;
   pokeImagem.src =
-    pokeData['sprites']['versions']['generation-v']['black-white']['animated'][
+    poke['sprites']['versions']['generation-v']['black-white']['animated'][
       'front_default'
-    ] || pokeData.sprites.front_default;
-  if (pokeImagem.src == pokeData.sprites.front_default) {
+    ] || poke.sprites.front_default;
+  if (pokeImagem.src == poke.sprites.front_default) {
     pkmImagem.style.width = '150px';
   }
-  pkId.innerHTML = pokeData.id;
-  pkWeight.innerHTML = pokeData.weight;
+  pkId.innerHTML = poke.id;
+  pkWeight.innerHTML = poke.weight;
 
-  let listaStatsAtributes = pokeData.stats.map((statsPoke) => statsPoke.base_stat);
+  let listaStatsAtributes = poke.stats.map((statsPoke) => statsPoke.base_stat);
 
   let hpConvertidoUptade = listaStatsAtributes[0];
   let atakConvertidoUptade = listaStatsAtributes[1];
@@ -39,11 +39,11 @@ async function updateCard(pokeData) {
   baseSpDef.innerHTML = spdefConvertidoUptade;
   baseSpeed.innerHTML = speedConvertidoUptade;
 
-  pkType1.innerHTML = pokeData.types.map((typePoke) => typePoke.type.name).join(', ');
+  pkType1.innerHTML = poke.types.map((typePoke) => typePoke.type.name).join(', ');
 
   localStorage.setItem('idPokemon', pkId);
 
-  await showWeaknesses(pokeData);
+  await showWeaknesses(poke);
 }
 
 async function pokeInfo() {
@@ -96,8 +96,8 @@ async function pokeInfo() {
   });
 }
 
-async function showWeaknesses(pokeData) {
-  await fraquezas(pokeData);
+async function showWeaknesses(poke) {
+  await fraquezas(poke);
   fraquezasList.innerHTML = '';
 
   if (localStorage.getItem('fraqueza')) {
@@ -105,9 +105,9 @@ async function showWeaknesses(pokeData) {
   }
 }
 
-async function fraquezas(pokeData) {
+async function fraquezas(poke) {
   try {
-    const weaknessesPromises = pokeData.types.map(async (type) => {
+    const weaknessesPromises = poke.types.map(async (type) => {
       const typeUrl = type.type.url;
       const response = await fetch(typeUrl);
       const typeDetails = await response.json();
