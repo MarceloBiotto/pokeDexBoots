@@ -83,6 +83,10 @@ async function pokeInfo() {
     e.preventDefault();
     mudaCard.forEach((card) => {
       card.classList.toggle('hidden');
+      if(fraquezasList.classList.contains('hidden')){
+        fraquezasList.classList.remove('hidden');
+      }
+      
     });
   });
 
@@ -90,6 +94,9 @@ async function pokeInfo() {
     e.preventDefault();
     mudaCard.forEach((card) => {
       card.classList.toggle('hidden2');
+      if(fraquezasList.classList.contains('hidden')){
+        fraquezasList.classList.remove('hidden');
+      } // verificar aqui se esta funcionando
     });
 
     await showWeaknesses(poke);
