@@ -10,6 +10,7 @@ let mudaCard = document.querySelectorAll('.card-title');
 let weaknessesText = document.querySelector('.textfraqueza');
 let buttonFraq = document.querySelector('.button__fraqueza')
 let fraquezas = document.querySelector('.fraqueza');
+let uniqueWeaknesses;
 
 async function pokeInfo(){
     const pokemonGerado =   localStorage.getItem('idPokemon');
@@ -63,8 +64,7 @@ async function pokeInfo(){
       mudaCard.forEach(card => {
         card.classList.toggle('hidden2');
       });
-      
-
+    
     });
 
 
@@ -88,6 +88,7 @@ async function fraquezas() {
     const allWeaknesses = await Promise.all(weaknessesPromises);
 
     console.log(allWeaknesses);
+
     const uniqueWeaknesses = [...new Set(allWeaknesses.flat())];
 
     const weaknessesText =
@@ -101,7 +102,7 @@ async function fraquezas() {
   }
 }
 
-fraquezas();
+await fraquezas();
 }
 
 
@@ -165,6 +166,7 @@ fraquezas();
         const allWeaknesses = await Promise.all(weaknessesPromises);
     
         console.log(allWeaknesses);
+    
         const uniqueWeaknesses = [...new Set(allWeaknesses.flat())];
     
         const weaknessesText =
@@ -178,8 +180,8 @@ fraquezas();
       }
     }
     
-    fraquezas();
-}
+    await fraquezas();
+    }
 
 
 let idPokemonGerado =   localStorage.getItem('idPokemon');
