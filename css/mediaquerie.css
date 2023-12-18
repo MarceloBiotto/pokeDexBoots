@@ -13,6 +13,14 @@
     }
 }
 
+@media screen and (max-width: 1920px) {
+    .button__click {
+        bottom: 20.5%;
+        left: 62.6%;
+    }
+    
+}
+
 @media screen and (max-width: 1440px) {
     .card__botao-next{
         bottom: 22%;
