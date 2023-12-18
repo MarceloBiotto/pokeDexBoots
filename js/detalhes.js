@@ -7,6 +7,9 @@ let baseSpDef = document.querySelector('.statSdef')
 let baseSpeed = document.querySelector('.statSpeed');
 let buttonStat = document.querySelector('.button__stats');
 let mudaCard = document.querySelectorAll('.card-title');
+let weaknessesText = document.querySelector('.textfraqueza');
+let buttonFraq = document.querySelector('.button__fraqueza')
+let fraquezas = document.querySelector('.fraqueza');
 
 async function pokeInfo(){
     const pokemonGerado =   localStorage.getItem('idPokemon');
@@ -54,15 +57,57 @@ async function pokeInfo(){
         card.classList.toggle('hidden');
       });
     });
-   
+
+    buttonFraq.addEventListener('click', (e) => {
+      e.preventDefault();
+      mudaCard.forEach(card => {
+        card.classList.toggle('hidden2');
+      });
+      
+
+    });
+
 
 
 
 
 ;
 
+async function fraquezas() {
+  try {
+    const weaknessesPromises = poke.types.map(async (type) => {
+      const typeUrl = type.type.url;
+      const response = await fetch(typeUrl);
+      const typeDetails = await response.json();
+      return typeDetails.damage_relations.double_damage_from.map(
+        (weakness) => weakness.name
+      );
+    });
+
+
+    const allWeaknesses = await Promise.all(weaknessesPromises);
+
+    console.log(allWeaknesses);
+    const uniqueWeaknesses = [...new Set(allWeaknesses.flat())];
+
+    const weaknessesText =
+      uniqueWeaknesses.length > 0
+        ? `<p>Fraquezas:${uniqueWeaknesses.join(", ")}</p>`
+        : "";
+
+    localStorage.setItem('fraqueza', weaknessesText);
+  } catch (error) {
+    console.error("Erro ao obter fraquezas:", error);
+  }
+}
+
+fraquezas();
+}
+
+
+
     
-   }
+   
 
   //  pokeInfo();
 
@@ -104,6 +149,36 @@ async function pokeInfo(){
   
 
     localStorage.setItem('idPokemon', pkId);
+
+    async function fraquezas() {
+      try {
+        const weaknessesPromises = pokeUptadeAtribute.types.map(async (type) => {
+          const typeUrl = type.type.url;
+          const response = await fetch(typeUrl);
+          const typeDetails = await response.json();
+          return typeDetails.damage_relations.double_damage_from.map(
+            (weakness) => weakness.name
+          );
+        });
+    
+    
+        const allWeaknesses = await Promise.all(weaknessesPromises);
+    
+        console.log(allWeaknesses);
+        const uniqueWeaknesses = [...new Set(allWeaknesses.flat())];
+    
+        const weaknessesText =
+          uniqueWeaknesses.length > 0
+            ? `<p>Fraquezas:${uniqueWeaknesses.join(", ")}</p>`
+            : "";
+    
+        localStorage.setItem('fraqueza', weaknessesText);
+      } catch (error) {
+        console.error("Erro ao obter fraquezas:", error);
+      }
+    }
+    
+    fraquezas();
 }
 
 
@@ -130,3 +205,4 @@ document.addEventListener("DOMContentLoaded", () => {
   currentId = idPokemonGerado;
  
 });
+
