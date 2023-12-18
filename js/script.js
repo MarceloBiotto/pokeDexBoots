@@ -31,6 +31,7 @@
             <p>ID: ${pokemonData.id}</p>
             <p>Name: <span class= "pokemon-name">${pokemonData.name}</span></p>
             <img class="img-pokemon img-fluid" src="${pokemonData.sprites.front_default}" alt="imagem pokemon">
+            
             <p >Type: ${pokemonData.types.map(typePoke => typePoke.type.name)}
           </div>
         </li>

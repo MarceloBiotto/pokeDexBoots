@@ -7,11 +7,11 @@ let baseSpDef = document.querySelector('.statSdef')
 let baseSpeed = document.querySelector('.statSpeed');
 let buttonStat = document.querySelector('.button__stats');
 let mudaCard = document.querySelectorAll('.card-title');
-let weaknessesText = document.querySelector('.textfraqueza');
 let buttonFraq = document.querySelector('.button__fraqueza')
-let fraquezas = document.querySelector('.fraqueza');
-let uniqueWeaknesses;
 
+  let uniqueWeaknesses;
+
+fraquezas = localStorage.getItem('fraqueza');
 async function pokeInfo(){
     const pokemonGerado =   localStorage.getItem('idPokemon');
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);  
@@ -63,8 +63,9 @@ async function pokeInfo(){
       e.preventDefault();
       mudaCard.forEach(card => {
         card.classList.toggle('hidden2');
+      
       });
-    
+     
     });
 
 
@@ -84,16 +85,18 @@ async function fraquezas() {
       );
     });
 
+    const allWeaknessesArrays = await Promise.all(weaknessesPromises);
 
-    const allWeaknesses = await Promise.all(weaknessesPromises);
+    const allWeaknesses = allWeaknessesArrays.flat();
 
     console.log(allWeaknesses);
 
-    const uniqueWeaknesses = [...new Set(allWeaknesses.flat())];
+
+    const uniqueWeaknesses = [...new Set(allWeaknesses)];
 
     const weaknessesText =
       uniqueWeaknesses.length > 0
-        ? `<p>Fraquezas:${uniqueWeaknesses.join(", ")}</p>`
+        ? `<p>Fraquezas: ${uniqueWeaknesses.join(", ")}</p>`
         : "";
 
     localStorage.setItem('fraqueza', weaknessesText);
