@@ -10,6 +10,7 @@ let mudaCard = document.querySelectorAll('.card-title');
 let weaknessesText = document.querySelector('.textfraqueza');
 let buttonFraq = document.querySelector('.button__fraqueza');
 let fraquezasList = document.querySelector('.fraquezas-list');
+let habilidadesPoke = document.querySelector('.habilidades');
 
 async function updateCard(poke) {
   pkmName.innerHTML = poke.name;
@@ -94,6 +95,7 @@ async function pokeInfo() {
     e.preventDefault();
     mudaCard.forEach((card) => {
       card.classList.toggle('hidden2');
+      habilidadesPoke.innerHTML =` <p> Habilidades: ${poke.abilities.map((abilityPoke) => abilityPoke.ability.name)};`
       if(fraquezasList.classList.contains('hidden')){
         fraquezasList.classList.remove('hidden');
       } 
