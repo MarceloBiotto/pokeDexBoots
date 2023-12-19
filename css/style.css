@@ -118,6 +118,6 @@
     border: solid 2px black;
     
 }
-.img-pokemon:hover{
+/* .img-pokemon:hover{
     background-image: src("pokemonData.sprites.front_shiny");
-}
+} */
