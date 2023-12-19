@@ -116,11 +116,8 @@
 .pokemon__lista:hover{
     cursor: pointer;
     border: solid 2px black;
-
+    
 }
-/* .img-pokemon:hover{
-    width: 105px;
-    display: block;
-    position: absolute;
-
-} */
+.img-pokemon:hover{
+    background-image: ("pokemonData.sprites.front_shiny");
+}

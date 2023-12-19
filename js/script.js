@@ -30,8 +30,8 @@
           
             <p>ID: ${pokemonData.id}</p>
             <p>Name: <span class= "pokemon-name">${pokemonData.name}</span></p>
-            <img class="img-pokemon img-fluid" src="${pokemonData.sprites.front_default}" alt="imagem pokemon">
-            
+           <img class="img-pokemon img-fluid" src="${pokemonData.sprites.front_default}" alt="imagem pokemon">
+           
             
             <p >Type: ${pokemonData.types.map(typePoke => typePoke.type.name)}
           </div>
@@ -60,7 +60,7 @@
   
     
   }catch(error){
-    pokemonElement.innerHTML += `<p> Houve um erro ao carregar os pokemons: ${error}</p>`
+     console.log(`Houve um erro ao carregar os pokemons: ${error}`);
   }
 
 
@@ -70,6 +70,7 @@
 buscarEMostrarPokemons();
   
 function capturarInformacoes() {
+  try{
   let valorForm = document.querySelector('.form-control').value.toLowerCase();
   let pokeIdName = valorForm;
 
@@ -84,8 +85,10 @@ function capturarInformacoes() {
 
 
   searchInfo(pokeIdName);
+}catch(error){
+  alert('não possivel carregar informações');
 }
-
+}
 inputBusca.addEventListener('click', async (e) => {
   e.preventDefault();
   capturarInformacoes();

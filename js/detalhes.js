@@ -48,6 +48,7 @@ async function updateCard(poke) {
 }
 
 async function pokeInfo() {
+  try{
   const pokemonGerado = localStorage.getItem('idPokemon');
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGerado}`);
   const poke = await response.json();
@@ -105,8 +106,10 @@ async function pokeInfo() {
 
     await showWeaknesses(poke);
   });
+}catch(error){
+  console.log(`Não foi possivel acessar as informações do pokemon ${error}`)
 }
-
+}
 async function showWeaknesses(poke) {
   await fraquezas(poke);
   fraquezasList.innerHTML = '';
@@ -141,9 +144,13 @@ async function fraquezas(poke) {
 }
 
 async function pokeUpdate() {
+  try{
   const responseUptade = await fetch(`https://pokeapi.co/api/v2/pokemon/${currentId}`);
   const pokeUptadeAtribute = await responseUptade.json();
   await updateCard(pokeUptadeAtribute);
+}catch(error){
+  console.log(`Não foi possivel atualizar as informações do pokemon ${error}`)
+}
 }
 
 let idPokemonGerado = localStorage.getItem('idPokemon');
