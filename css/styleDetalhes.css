@@ -15,10 +15,17 @@ body {
     align-content: flex-end;
     flex-direction: row;
     position: absolute;
-    height: 200px;
+    height: 190px;
     width: 290px;
-    left: 40%;
     top: 53%;
+}
+.card-title{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 200px;
+    margin-left: 50px;
+
 }
 
 #pkmn {
