@@ -132,7 +132,7 @@ async function fraquezas(poke) {
     const uniqueWeaknesses = [...new Set(allWeaknesses.flat())];
 
     const weaknessesText =
-      uniqueWeaknesses.length > 0 ? `<p>Fraquezas:${uniqueWeaknesses.join(', ')}</p>` : '';
+      uniqueWeaknesses.length > 0 ? `<p>Fraquezas: ${uniqueWeaknesses.join(', ')}</p>` : '';
 
     localStorage.setItem('fraqueza', weaknessesText);
   } catch (error) {
