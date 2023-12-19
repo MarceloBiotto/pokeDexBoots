@@ -111,6 +111,7 @@ async function pokeInfo() {
 }
 }
 async function showWeaknesses(poke) {
+
   await fraquezas(poke);
   fraquezasList.innerHTML = '';
 

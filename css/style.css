@@ -119,5 +119,5 @@
     
 }
 .img-pokemon:hover{
-    background-image: ("pokemonData.sprites.front_shiny");
+    background-image: src("pokemonData.sprites.front_shiny");
 }
