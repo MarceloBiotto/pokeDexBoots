@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex detalhes</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/styleDetalhes.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mediaquerie.css">
@@ -16,15 +16,9 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-danger">
             <div class="container-fluid">
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -36,40 +30,40 @@
                             <a class="nav-link" href="#">About</a>
                         </li>
                     </ul>
-        
+
                 </div>
             </div>
         </nav>
-    </header> 
+    </header>
 
-    <div class="container d-flex justify-content-center align-items-center">
+    <div class="container">
 
-        <img class="poke-imagem poke__size img-fluid d-none d-md-block d-sm-none" src="./assets/img/pokedex-fundo2.png" alt="Imagem Dex">
-        <img class="poke-imagem img-fluid d-sm-block d-md-none" src="./assets/img/gameboydex1.png" alt="Imagem Dex mobile">
+        <section class="alocator">
+            <img class="poke-imagem poke__size img-fluid d-none d-md-block d-sm-none"
+                src="./assets/img/pokedex-fundo2.png" alt="Imagem Dex">
+            <img class="poke-imagem img-fluid d-sm-block d-md-none" src="./assets/img/gameboydex1.png"
+                alt="Imagem Dex mobile">
+            <div class="row d-flex align-items-center justify-content-center">
 
-        <div class="row d-flex align-items-center justify-content-center">
-            
-            <div class="card d-flex bg-transparent border border-0 align-items-center text-center">
+                <div class="card d-flex bg-transparent border border-0 align-items-center text-center">
+                    <div class="col-1">
+                        <ul class="card-body text-start text-shadow text-white fw-bold">
+                            <li class="card-title card-color">Id:</li>
+                            <li class="card-title card-color">Name:</li>
+                            <li class="card-title card-color">Type:</li>
+                            <li class="card-title card-color">Wight:</li>
+                            <ul class="fraquezas-list card-title hidden2 mt-2"></ul>
+                            <ul class="card-title hidden2 habilidades  mt-2">Habilidades: </ul>
 
-                <div class="col-1">
-                    <ul class="card-body text-start text-shadow text-white fw-bold">
-                        <li class="card-title card-color">Id:</li>
-                        <li class="card-title card-color">Name:</li>
-                        <li class="card-title card-color">Type:</li>
-                        <li class="card-title card-color">Wight:</li>
-                        <ul class="fraquezas-list card-title hidden2 mt-2"></ul>
-                        <ul class="card-title hidden2 habilidades  mt-2">Habilidades: </ul>
-                    
-                    </ul>
-                </div>
-         
-                <ul class=" card-body text-start text-white fw-bold">
-                    <li class="card-title poke-info" id="numberPoke"> </li>
-                    <li class="card-title poke-info" id="pokeName"> </li>
-                    <li class="card-title poke-info" id="pokeType1"> </li>
-                    <li class="card-title poke-info" id="weight"> </li>
-                    <li class="card-title poke-info textfraqueza"></li>
+                        </ul>
+                    </div>
 
+                    <ul class=" card-body text-start text-white fw-bold">
+                        <li class="card-title poke-info" id="numberPoke"> </li>
+                        <li class="card-title poke-info" id="pokeName"> </li>
+                        <li class="card-title poke-info" id="pokeType1"> </li>
+                        <li class="card-title poke-info" id="weight"> </li>
+                        <li class="card-title poke-info textfraqueza"></li>
                         <div class="d-flex ">
                             <div class="d-flex flex-column col-6  poke__lista-atributos ">
                                 <li class="card-title hidden">hp:</li>
@@ -88,28 +82,28 @@
                                 <li class="statSpeed card-title hidden"></li>
                             </div>
                         </div>
- 
-                   
-                </ul>
-              
-                  
-                
-             
-                
-                <img src="./assets/pokebola.png" id="pkmn" class="img-fluid"/>
-                
+
+                    </ul>
+
+
+
+
+
+                    <img src="./assets/pokebola.png" id="pkmn" class="img-fluid" />
+
+                </div>
+                <div class="d-flex">
+                    <button class="btn btn-primary button__stats" type="button">Stats</button>
+                    <button class="btn btn-primary button__fraqueza">fraqueza</button>
+                </div>
             </div>
-            <div class="d-flex">
-                <button class="btn btn-primary button__stats" type="button">Stats</button>
-                <button class="btn btn-primary button__fraqueza">fraqueza</button>
-            </div>
-        </div>
-        <section class="button__click">
-            <button id="previous-btn" class="card__botao-prev"></button>
-            <button id="next-btn" class="card__botao-next"></button>
+            <section class="button__click">
+                <button id="previous-btn" class="card__botao-prev"></button>
+                <button id="next-btn" class="card__botao-next"></button>
+            </section>
         </section>
     </div>
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>

@@ -60,13 +60,30 @@ margin-right: 24px;
 }
 
 .container {
-    height: 94vh;
-    /* width: 25%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 80vh;    
+    max-width: 620px;
     position: relative;
+
+}
+
+.alocator {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
 }
 
 .poke-imagem {
-    position: absolute;
+    max-height: 90vh;
+    position: inherit;
+    top: 5%;
 }
 
 .btn-primary {
@@ -101,7 +118,8 @@ margin-right: 24px;
     width: 75px;
     height: 75px;
     background-color: rgba(255, 255, 255, 0.349);
-    top: 20%;
-    left: 20%;
+    top: 72%;
+    left: 82%;
+    transform: translate(5%, 10%);
 }
 
