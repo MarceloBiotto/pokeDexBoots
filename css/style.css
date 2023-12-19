@@ -20,7 +20,7 @@
     color: white;
     background-color: rgba(77, 75, 75, 0.486);
     padding-top: 12px;
-    font-size: 12px;
+    font-size: 0.8rem;
 
     
 }
@@ -30,7 +30,7 @@
 }
 
 .card-title{
-    margin: 0;
+    margin: -5px -80px;
  
 }
 .container {
