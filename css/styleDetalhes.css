@@ -61,12 +61,12 @@ margin-right: 24px;
 
 .container {
     height: 94vh;
+    /* width: 25%; */
     position: relative;
 }
 
 .poke-imagem {
     position: absolute;
-
 }
 
 .btn-primary {
@@ -95,7 +95,7 @@ margin-right: 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* position: initial; */
+    position: absolute;
     z-index: 1;
     border-radius: 50%;
     width: 75px;
