@@ -8,7 +8,11 @@ Tais como id,nome, tipo e também habilidades e fraquezas! </p> <br>
 
 
 
+<h2 align="center">Como baixar este repositório</h2>
 
+<p align="center">Para baixar este repositório em sua máquina, você pode clicar no botão verde "Code" (ali em cima) e fazer download do .zip ou, caso você tenha noções de Git, você pode forká-lo e/ou cloná-lo.</p> 
+
+---
 
 <h2 align="center"> Tecnologias utilizadas 💻</h2>
 <div align="center" style="display: inline_block">
