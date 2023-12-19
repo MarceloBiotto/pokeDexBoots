@@ -13,6 +13,13 @@ Tais como id,nome, tipo e também habilidades e fraquezas! </p> <br>
 <p align="center">Para baixar este repositório em sua máquina, você pode clicar no botão verde "Code" (ali em cima) e fazer download do .zip ou, caso você tenha noções de Git, você pode forká-lo e/ou cloná-lo.</p> 
 
 ---
+## 💻 Funcionalidades
+
+> * No campo de busca digite  o nome ou o numero do pokemon correspondente desejado.
+> * Ou clique no card do pokemon escolhido.Podendo também ao fundo da tela clicar para gerar mais pokémons pela ordem da ID.
+> * O Site ira buscar na pokeapi os dados e ira retornar em uma nova tela, dessa vez com a própria pokedex os dados do pokemon escolhido.
+> * Responsividade para todas as telas e também para mobile!
+
 
 <h2 align="center"> Tecnologias utilizadas 💻</h2>
 <div align="center" style="display: inline_block">
