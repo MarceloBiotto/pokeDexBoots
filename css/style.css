@@ -22,6 +22,10 @@
     padding: 8px;
     
 }
+.poke__lista-atributos{
+    color: white;
+    background-color: rgba(77, 75, 75, 0.486);
+}
 
 .card-title{
     margin: 0;
