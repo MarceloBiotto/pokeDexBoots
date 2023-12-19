@@ -120,5 +120,7 @@
 }
 /* .img-pokemon:hover{
     width: 105px;
-    src= "${pokemonData.sprites.front_shiny}"; testar depois para dar hover shiny ao pokemon selecionado
+    display: block;
+    position: absolute;
+
 } */
