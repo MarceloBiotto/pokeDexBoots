@@ -27,3 +27,12 @@ Tais como id,nome, tipo e também habilidades e fraquezas! </p> <br>
   <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
   <img align="center" alt="JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
 </div>
+
+# `Autores`
+
+Marcelo Cardoso </br>
+<a href="https://www.linkedin.com/in/marcelo-cardoso-0372b385/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> <a href="https://github.com/wilsonsantos1992(https://github.com/MarceloBiotto)"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
+
+Geovane Girardi </br>
+<a href="https://www.linkedin.com/in/in/geovane-girard-070915142//(https://www.linkedin.com/in/in/geovane-girard-070915142//)"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+<a href="https://github.com/geovanegirard"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
