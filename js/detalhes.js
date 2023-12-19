@@ -23,7 +23,7 @@ async function updateCard(poke) {
   }
   pkId.innerHTML = poke.id;
   pkWeight.innerHTML = poke.weight;
-
+  habilidadesPoke.innerHTML = ` <p> Habilidades: ${poke.abilities.map((abilityPoke) => abilityPoke.ability.name)};`
   let listaStatsAtributes = poke.stats.map((statsPoke) => statsPoke.base_stat);
 
   let hpConvertidoUptade = listaStatsAtributes[0];
