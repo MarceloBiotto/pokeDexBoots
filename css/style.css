@@ -19,7 +19,9 @@
 .fraquezas-list, .habilidades{
     color: white;
     background-color: rgba(77, 75, 75, 0.486);
-    padding: 8px;
+    padding-top: 12px;
+    font-size: 12px;
+
     
 }
 .poke__lista-atributos{
