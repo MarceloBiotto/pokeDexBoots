@@ -44,7 +44,7 @@ body {
 .card-color {
     margin: 0px 0px 5px;
     width: 160px;
-    background-image: linear-gradient(to right, rgba(128, 128, 128, 0.6) , rgba(255, 255, 255, 0.3));
+    background-color: rgba(77, 75, 75, 0.486);
     font-size: 15px;
 }
 
