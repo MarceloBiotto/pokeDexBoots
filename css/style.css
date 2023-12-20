@@ -5,6 +5,8 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .pokemon__lista{
