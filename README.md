@@ -4,6 +4,8 @@
 <p align="center">Pokedex feita para a conclusão do curso do SenacTech.🌱 <br>
 A ideia era criar uma Pokédex e nela poder selecionar e ver as informações de cada Pokémon.
 Tais como id,nome, tipo e também habilidades e fraquezas! </p> <br>
+<a align="center" href="https://drive.google.com/file/d/1EAb3j08Hzf9EC-L4RgYCPiNyDZkNNT9R/view?usp=sharing">Acesse aqui </a>as orientações do trabalho.Existe também no projeto o arquivo completo em PDF para ser baixado.
+
 
 
 
