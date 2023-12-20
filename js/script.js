@@ -40,6 +40,14 @@
       
 
 
+      pokemonElement.addEventListener('mouseover', () => {
+        pokemonElement.querySelector('.img-pokemon').src = pokemonData.sprites.front_shiny;
+      });
+    
+     
+      pokemonElement.addEventListener('mouseout', () => {
+        pokemonElement.querySelector('.img-pokemon').src = pokemonData.sprites.front_default;
+      });
 
       await containerPokemon.appendChild(pokemonElement);
 
