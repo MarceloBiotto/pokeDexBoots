@@ -1,4 +1,69 @@
-@media (min-width: 1201px) {
+@media (max-width: 1920px) {
+    .container {
+        height: 75vh;    
+    
+    }
+
+    .card {
+        top: 56%;
+    }
+
+    .button__click {
+
+        top: 76%;
+    }
+
+    .status {
+
+        top: 86%;
+    }
+
+}
+
+@media (min-width: 1680px) and (max-width: 1919px) {
+    .container {
+        height: 80vh;    
+    
+    }
+
+    .card {
+        top: 55%;
+    }
+
+    .button__click {
+
+        top: 74%;
+    }
+
+    .status {
+
+        top: 85%;
+    }
+
+}
+
+@media (min-width: 1360px) and (max-width: 1679px) {
+    .container {
+        height: 100vh;    
+    
+    }
+
+    .card {
+        top: 57%;
+    }
+
+    .button__click {
+
+        top: 78%;
+    }
+
+    .status {
+
+        top: 89%;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1359px) {
     .container {
         height: 73vh;    
     
