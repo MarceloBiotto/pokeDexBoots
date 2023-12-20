@@ -21,14 +21,6 @@ Tais como id,nome, tipo e também habilidades e fraquezas! </p> <br>
 > * Responsividade para todas as telas e também para mobile!
 
 
-<h2 align="center"> Tecnologias utilizadas 💻</h2>
-<div align="center" style="display: inline_block">
-  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg">
-  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
-</div>
-
-
 <h2 align="center"> Exemplos de uso </h2>
 
 <p align="center">Tela inicial </p>
@@ -44,7 +36,12 @@ Tais como id,nome, tipo e também habilidades e fraquezas! </p> <br>
 <img width= "470" height="300" src="assets/gif/statsEfraquezas.gif">
 </p>
 
-
+<h2 align="center"> Tecnologias utilizadas 💻</h2>
+<div align="center" style="display: inline_block">
+  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg">
+  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+</div>
 
 # `Autores`
 
