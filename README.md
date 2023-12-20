@@ -28,6 +28,24 @@ Tais como id,nome, tipo e também habilidades e fraquezas! </p> <br>
   <img align="center" alt="JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
 </div>
 
+
+<h2 align="center"> Exemplos de uso </h2>
+
+<p align="center">Tela inicial </p>
+<p align="center">
+<img width= "470" height="300" src="assets/gif/teleInicial.gif">
+</p>
+<p align="center">Clicando no Card do pokemon abrimos a pokedex, onde podemos navegar pelas setas para outros pokemons!</p>
+<p align="center">
+<img width= "470" height="300" src="assets/gif/cliqueNoCard.gif">
+</p>
+<p align="center">Consultando informações como id,name, e também é possivel verificar stats como HP,atk,def... e as fraquezas e Habilidades do pokemon!</p>
+<p align="center">
+<img width= "470" height="300" src="assets/gif/statsEfraquezas.gif">
+</p>
+
+
+
 # `Autores`
 
 Marcelo Cardoso </br>
