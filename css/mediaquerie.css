@@ -20,7 +20,7 @@
 
 }
 
-/* @media (min-width: 1680px) and (max-width: 1919px) {
+@media (min-width: 1680px) and (max-width: 1919px) {
     .container {
         height: 80vh;    
     
@@ -40,7 +40,7 @@
         top: 85%;
     }
 
-} */
+}
 
 
 
@@ -59,13 +59,13 @@
 
     .button__click {
 
-        top: 66%; /* 79% */
+        top: 79%; 
         left: 81%;
     }
 
     .status {
 
-        top: 74%; /*91%;*/
+        top: 91%; 
     }
 }
 

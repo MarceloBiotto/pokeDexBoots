@@ -68,7 +68,7 @@
     background-color: rgba(139, 0, 0, 0.8);
 }
 .water{
-    background-color: rgba(0, 0, 255, 0.8);
+    background-color: rgba(0, 225, 255, 0.705);
 }
 .flying{
     background-color: rgb(185, 106, 250, 0.8);
@@ -107,7 +107,7 @@
     background-color: rgb(87, 73, 73, 0.8);
 }
 .steel{
-    background-color: rgb(124, 120, 120, 0.8);
+    background-color: #b8b8d0cc;
 }
 .fairy{
     background-color: rgba(255, 192, 203, 0.8);
