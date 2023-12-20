@@ -131,7 +131,7 @@ async function fraquezas(poke) {
 
     const allWeaknesses = await Promise.all(weaknessesPromises);
 
-    console.log(allWeaknesses);
+    
 
     const uniqueWeaknesses = [...new Set(allWeaknesses.flat())];
 

@@ -6,7 +6,7 @@
   let pkType2 = document.querySelector('#pokeType2');
   let pkWeight = document.querySelector('#weight');
   let inputBusca = document.querySelector('.inputBuscar');
-  // let tipoPoke = document.querySelector('.pokemon-type').value;
+  
 
 
 
@@ -14,8 +14,7 @@
     try{
     
     let containerPokemon = document.querySelector('.container-pokemons');
-    // const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=20"); // essa esta funcionando, estamos testando a pagination 
-    // com a response a baixo;
+ 
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${contador}&offset=${offSet}`)
                    
       const data = await response.json();
