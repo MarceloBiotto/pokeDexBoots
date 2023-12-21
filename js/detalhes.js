@@ -46,6 +46,16 @@ async function updateCard(poke) {
   pkType1.innerHTML = poke.types.map((typePoke) => typePoke.type.name).join(', ');
 
   localStorage.setItem('idPokemon', pkId);
+  buttonShiny.addEventListener('click', async()=>{
+    pokeImagem.src =  poke['sprites']['other']['showdown']['front_shiny']
+  });
+
+  buttonRemoveShiny.addEventListener('click', async()=>{
+    pokeImagem.src =  poke['sprites']['versions']['generation-v']['black-white']['animated'][
+      'front_default'
+    ] 
+  });
+
 
   await showWeaknesses(poke);
 }
@@ -167,9 +177,7 @@ async function pokeUpdate() {
   console.log(`Não foi possivel atualizar as informações do pokemon ${error}`)
 }
 }
-buttonShiny.addEventListener('click', async()=>{
-  pokeImagem.src =  poke['sprites']['other']['dream_world']['front_default']
-});
+
 
 
 let idPokemonGerado = localStorage.getItem('idPokemon');
@@ -198,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
   currentId = idPokemonGerado;
 });
 
-buttonShiny.addEventListener('click', async()=>{
-  pokeImagem.src =  poke['sprites']['other']['dream_world']['front_default']
+// buttonShiny.addEventListener('click', async()=>{
+//   pokeImagem.src =  poke['sprites']['other']['dream_world']['front_default']
 
-});
+// });
