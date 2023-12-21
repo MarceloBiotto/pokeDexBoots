@@ -6,11 +6,14 @@ let baseSpatk = document.querySelector('.statSpatk');
 let baseSpDef = document.querySelector('.statSdef');
 let baseSpeed = document.querySelector('.statSpeed');
 let buttonStat = document.querySelector('.button__stats');
+let buttonShiny = document.querySelector('.arrow-top');
+let buttonRemoveShiny = document.querySelector('.arrow-bottom')
 let mudaCard = document.querySelectorAll('.card-title');
 let weaknessesText = document.querySelector('.textfraqueza');
 let buttonFraq = document.querySelector('.button__fraqueza');
 let fraquezasList = document.querySelector('.fraquezas-list');
 let habilidadesPoke = document.querySelector('.habilidades');
+
 
 async function updateCard(poke) {
   pkmName.innerHTML = poke.name;
@@ -94,6 +97,16 @@ async function pokeInfo() {
     });
   });
 
+  buttonShiny.addEventListener('click', async()=>{
+    pokeImagem.src =  poke['sprites']['other']['showdown']['front_shiny']
+  });
+
+  buttonRemoveShiny.addEventListener('click', async()=>{
+    pokeImagem.src =  poke['sprites']['versions']['generation-v']['black-white']['animated'][
+      'front_default'
+    ] 
+  });
+
   buttonFraq.addEventListener('click', async (e) => {
     e.preventDefault();
     mudaCard.forEach((card) => {
@@ -149,15 +162,21 @@ async function pokeUpdate() {
   const responseUptade = await fetch(`https://pokeapi.co/api/v2/pokemon/${currentId}`);
   const pokeUptadeAtribute = await responseUptade.json();
   await updateCard(pokeUptadeAtribute);
+
 }catch(error){
   console.log(`Não foi possivel atualizar as informações do pokemon ${error}`)
 }
 }
+buttonShiny.addEventListener('click', async()=>{
+  pokeImagem.src =  poke['sprites']['other']['dream_world']['front_default']
+});
+
 
 let idPokemonGerado = localStorage.getItem('idPokemon');
 document.addEventListener('DOMContentLoaded', () => {
   const previousButton = document.getElementById('previous-btn');
   const nextButton = document.getElementById('next-btn');
+
 
   previousButton.addEventListener('click', async () => {
     if (currentId > 1) {
@@ -166,10 +185,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
   nextButton.addEventListener('click', async () => {
     currentId++;
     await pokeUpdate();
   });
 
+
+
+  
+
   currentId = idPokemonGerado;
+});
+
+buttonShiny.addEventListener('click', async()=>{
+  pokeImagem.src =  poke['sprites']['other']['dream_world']['front_default']
+
 });
