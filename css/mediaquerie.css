@@ -1,6 +1,7 @@
-@media (max-width: 1920px) {
+@media (min-width: 1920px) {
+
     .container {
-        height: 75vh;    
+        height: 71vh;    
     
     }
 
@@ -17,7 +18,6 @@
 
         top: 86%;
     }
-
 }
 
 @media (min-width: 1680px) and (max-width: 1919px) {
@@ -42,11 +42,9 @@
 
 }
 
-
-
 @media (min-width: 1360px) and (max-width: 1679px) {
     .container {
-        height: 100vh;    
+        height: 88vh;    
     
     }
 
