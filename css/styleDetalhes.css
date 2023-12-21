@@ -88,6 +88,13 @@ margin-right: 24px;
     top: 10%;
 }
 
+.poke-imagem-mobile {
+    height: 120%;
+    width: 100%;
+    position: absolute;
+    transform: translate(0 , 8%);
+}
+
 .btn-primary {
     position: relative;
 } 

@@ -44,7 +44,7 @@
 
 @media (min-width: 1360px) and (max-width: 1679px) {
     .container {
-        height: 88vh;    
+        height: 84.5vh;    
     
     }
 
@@ -123,5 +123,53 @@
 
         top: 84%;
         left: 40%;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 767px) {
+    .card {
+        top: 25%;
+    }
+
+    .button__click {
+
+        top: 70%;
+        left: 75%;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    .card {
+        top: 25%;
+    }
+
+    .button__click {
+
+        top: 70%;
+        left: 70%;
+    }
+
+    .status {
+
+        top: 80%;
+        left: 35%;
+    }
+}
+
+@media (max-width: 375px) {
+    .card {
+        top: 20%;
+    }
+
+    .button__click {
+
+        top: 70%;
+        left: 70%;
+    }
+
+    .status {
+
+        top: 80%;
+        left: 30%;
     }
 }
