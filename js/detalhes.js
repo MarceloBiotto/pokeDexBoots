@@ -46,8 +46,11 @@ async function updateCard(poke) {
   pkType1.innerHTML = poke.types.map((typePoke) => typePoke.type.name).join(', ');
 
   localStorage.setItem('idPokemon', pkId);
+
   buttonShiny.addEventListener('click', async()=>{
-    pokeImagem.src =  poke['sprites']['other']['showdown']['front_shiny']
+    pokeImagem.src =  poke['sprites']['versions']['generation-v']['black-white']['animated'][
+      'front_shiny'
+    ] 
   });
 
   buttonRemoveShiny.addEventListener('click', async()=>{
@@ -108,7 +111,9 @@ async function pokeInfo() {
   });
 
   buttonShiny.addEventListener('click', async()=>{
-    pokeImagem.src =  poke['sprites']['other']['showdown']['front_shiny']
+    pokeImagem.src =  poke['sprites']['versions']['generation-v']['black-white']['animated'][
+      'front_shiny'
+    ] 
   });
 
   buttonRemoveShiny.addEventListener('click', async()=>{
