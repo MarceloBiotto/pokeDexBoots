@@ -41,11 +41,7 @@
     margin: 0 12px;
  
 }
-/* .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
+
 .hidden{
     display: none;
 }
@@ -122,6 +118,8 @@
     border: solid 2px black;
     
 }
-/* .img-pokemon:hover{
-    background-image: src("pokemonData.sprites.front_shiny");
-} */
+
+.maisPoke {
+    max-width: 150px;
+
+}

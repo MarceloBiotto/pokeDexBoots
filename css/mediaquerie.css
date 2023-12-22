@@ -133,8 +133,13 @@
 
     .button__click {
 
-        top: 70%;
+        top: 80%;
         left: 75%;
+    }
+    .status {
+
+        top: 90%;
+        left: 38%;
     }
 }
 
@@ -145,13 +150,13 @@
 
     .button__click {
 
-        top: 70%;
+        top: 80%;
         left: 70%;
     }
 
     .status {
 
-        top: 80%;
+        top: 90%;
         left: 35%;
     }
 }
@@ -163,13 +168,13 @@
 
     .button__click {
 
-        top: 70%;
+        top: 80%;
         left: 70%;
     }
 
     .status {
 
-        top: 80%;
+        top: 90%;
         left: 30%;
     }
 }

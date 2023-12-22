@@ -95,6 +95,24 @@ margin-right: 24px;
     transform: translate(0 , 8%);
 }
 
+.fraquezas-list {
+    position: relative;
+    bottom: 40%;
+    left: -20%;
+}
+
+.habilidades {
+    position: relative;
+    bottom: 40%;
+    left: -20%;
+}
+
+/* .poke__lista-atributos {
+    position: relative;
+    top: 40%;
+    right: 20%;
+} */
+
 .btn-primary {
     position: relative;
 } 
