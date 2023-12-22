@@ -37,7 +37,10 @@ Tais como id,nome, tipo e também habilidades e fraquezas! </p> <br>
 <p align="center">
 <img width= "470" height="300" src="assets/gif/statsEfraquezas.gif">
 </p>
-
+<p align="center">Clicando na seta para cima podemos alterar para a versão shiny do pokemon, e ao clicar na seta para baixo removemos essa versão.</p>
+<p align="center">
+<img width="470" height="300" src="assets/gif/shinyButton.gif">
+</p>
 <h2 align="center"> Tecnologias utilizadas 💻</h2>
 <div align="center" style="display: inline_block">
   <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg">
