@@ -1,4 +1,4 @@
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
 
     .container {
         height: 71vh;    
@@ -17,6 +17,28 @@
     .status {
 
         top: 86%;
+    }
+}
+
+@media (max-width: 1920px) {
+
+    .container {
+        height: 71vh;    
+    
+    }
+
+    .card {
+        top: 56%;
+    }
+
+    .button__click {
+
+        top: 78%;
+    }
+
+    .status {
+
+        top: 88%;
     }
 }
 
