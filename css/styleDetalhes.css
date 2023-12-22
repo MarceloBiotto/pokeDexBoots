@@ -40,7 +40,11 @@ body {
     width: 140px;
     height: 120px;
     list-style: none;
-    
+}
+
+.card-poke {
+    position: relative;
+    bottom: 30%;
 }
 
 .card-color {
@@ -57,8 +61,8 @@ body {
 }
 
 .col-1{
-padding: 1px;
-margin-right: 24px;
+    padding: 1px;
+    margin-right: 24px;
 }
 
 .container {
@@ -107,11 +111,10 @@ margin-right: 24px;
     left: -20%;
 }
 
-/* .poke__lista-atributos {
+.poke__lista-atributos {
     position: relative;
-    top: 40%;
-    right: 20%;
-} */
+    right: 30%;
+}
 
 .btn-primary {
     position: relative;
@@ -211,4 +214,12 @@ margin-right: 24px;
 
 .actions-next:active {
     box-shadow: inset -2px 3px #222;
+}
+
+.arrow-top:active {
+    box-shadow: inset 2px 3px #222;
+}
+
+.arrow-bottom:active {
+    box-shadow: inset -2px -3px #222;
 }

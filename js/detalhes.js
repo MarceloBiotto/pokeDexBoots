@@ -210,8 +210,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   currentId = idPokemonGerado;
 });
-
-// buttonShiny.addEventListener('click', async()=>{
-//   pokeImagem.src =  poke['sprites']['other']['dream_world']['front_default']
-
-// });

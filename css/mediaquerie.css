@@ -42,7 +42,29 @@
 
 }
 
-@media (min-width: 1360px) and (max-width: 1679px) {
+@media (max-width: 1360px) {
+    .container {
+        height: 88vh;    
+    
+    }
+
+    .card {
+        top: 65%;
+    }
+
+    .button__click {
+
+        top: 88%; 
+        left: 82%;
+    }
+
+    .status {
+
+        top: 100%; 
+    }
+}
+
+@media (min-width: 1361px) and (max-width: 1679px) {
     .container {
         height: 84.5vh;    
     
